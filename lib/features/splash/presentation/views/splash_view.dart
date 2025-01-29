@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:islami/core/services/services_locator.dart';
+import 'package:islami/core/services/services_shared_preferences.dart';
 import 'package:islami/core/utils/app_style.dart';
 import 'package:islami/core/utils/assets.dart';
 
@@ -14,10 +16,13 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3), () {
-      // ignore: use_build_context_synchronously
-      context.replace('/intro');
-    });
+    bool checkIntro =
+        getIt<ServicesSharedPreferences>().getData(key: 'intro') ?? false;
+    print('3333333333333333333333');
+    print(checkIntro);
+    checkIntro
+        ? dyloadNavigat(context, '/home')
+        : dyloadNavigat(context, '/intro');
     super.initState();
   }
 
@@ -57,6 +62,11 @@ class _SplashViewState extends State<SplashView> {
                 width: 87,
                 height: 187,
               ),
+            ),
+            Positioned(
+              top: 0,
+              right: 13,
+              child: Image.asset(Assets.assetsImagesGlow),
             ),
             Positioned(
                 top: 341,
@@ -104,4 +114,10 @@ class _SplashViewState extends State<SplashView> {
       ),
     );
   }
+}
+
+void dyloadNavigat(context, String path) {
+  Future.delayed(Duration(seconds: 3), () {
+    GoRouter.of(context).pushReplacement(path);
+  });
 }

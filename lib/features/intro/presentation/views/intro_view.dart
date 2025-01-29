@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islami/core/utils/app_style.dart';
-import 'package:islami/core/utils/assets.dart';
+import 'package:islami/features/intro/presentation/widgets/intor_page_view.dart';
 import 'package:islami/features/intro/presentation/widgets/intro_app_bar_widget.dart';
 
 class IntroView extends StatelessWidget {
@@ -11,13 +10,19 @@ class IntroView extends StatelessWidget {
     return Scaffold(
       body: SizedBox(
         width: double.infinity,
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: 57,
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: SizedBox(
+                height: 57,
+              ),
             ),
-            IntorAppBarWidget()
+            SliverToBoxAdapter(
+              child: IntorAppBarWidget(),
+            ),
+            SliverToBoxAdapter(
+              child: IntroPageView(),
+            )
           ],
         ),
       ),
