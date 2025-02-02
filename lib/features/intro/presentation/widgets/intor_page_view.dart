@@ -102,7 +102,7 @@ class IntroPageView extends StatelessWidget {
                             await ServicesSharedPreferences()
                                 .saveData('intro', true);
                             // ignore: use_build_context_synchronously
-                            context.replace('/home');
+                            context.replace('/navi');
                           } else {
                             controller.nextPage(
                                 duration: Duration(microseconds: 5000),

@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:islami/features/hadith/model/azkari_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ServicesSharedPreferences {
@@ -25,14 +24,16 @@ class ServicesSharedPreferences {
     await sharedPreferences.setString('azkari', azkari);
   }
 
-  getAzkari() {
+   getAzkari() {
     
     String? azkariDecode = sharedPreferences.getString('azkari');
 
     if (azkariDecode != null) {
       return jsonDecode(azkariDecode);
+    } else {
+        return [];
     }
-    return null;
+  
   }
 
   dynamic getData({required String key}) {

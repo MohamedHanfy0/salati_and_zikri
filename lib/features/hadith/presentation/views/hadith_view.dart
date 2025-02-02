@@ -6,7 +6,7 @@ import 'package:islami/core/utils/app_style.dart';
 import 'package:islami/core/utils/assets.dart';
 import 'package:islami/core/widgets/custom_button.dart';
 import 'package:islami/core/widgets/intro_app_bar_widget.dart';
-import 'package:islami/features/hadith/model/azkari_model.dart';
+import 'package:islami/features/hadith/presentation/widgets/show_dialog_azkar.dart';
 
 class HadithView extends StatefulWidget {
   const HadithView({super.key});
@@ -17,7 +17,7 @@ class HadithView extends StatefulWidget {
 
 class _HadithViewState extends State<HadithView> {
   final pref = ServicesSharedPreferences();
-  List<Map<String, dynamic>> updateAzkari = [];
+
   List<Map<String, dynamic>> azkari = [
     {'name': 'سباحن الله', 'number': 0},
     {'name': 'الحمد لله', 'number': 0},
@@ -27,9 +27,9 @@ class _HadithViewState extends State<HadithView> {
     {'name': 'اللهم صلي علي محمد', 'number': 0},
     {'name': 'لا اله الا انت سبحانك اني كنت من الظالمين', 'number': 0},
     {'name': 'سبحان الله وبحمده سبحان الله العظيم', 'number': 0},
-    {'name': 'سباحن الله', 'number': 0},
-    {'name': 'سباحن الله', 'number': 0},
   ];
+  List<Map<String, dynamic>> updateAzkari = [];
+
   int indexUp = 0;
   String akr = 'سباحن الله';
   int numberSubha = 0;
@@ -46,10 +46,12 @@ class _HadithViewState extends State<HadithView> {
   }
 
   updateData(int indexNumber) {
-    if (pref.getAzkari() != null) {
+    if (pref.getAzkari().isEmpty) {
       pref.saveAzkari(azkari);
+      updateAzkari.addAll(azkari);
     } else {
-      updateAzkari = pref.getAzkari();
+      updateAzkari = List<Map<String, dynamic>>.from(pref.getAzkari());
+
       akr = updateAzkari[indexNumber]['name'];
       numberSubha = updateAzkari[indexNumber]['number'];
     }
@@ -115,13 +117,22 @@ class _HadithViewState extends State<HadithView> {
                         setState(() {
                           numberSubha = 0;
                         });
+                        resetSubha();
                       },
                     ),
                     ButtonLabelIcon(
                       text: "اختيار الذكر",
                       icon: Icon(Icons.circle),
                       click: () {
-                        showDialogAzkar(context);
+                        showDialogAzkar(context, updateAzkari, (index) {
+                          setState(() {
+                            akr = '${updateAzkari[index]['name']}';
+                            numberSubha = updateAzkari[index]['number'];
+                            indexUp = index;
+                            saveData();
+                          });
+                        });
+                        // showAboutDialog(context: context  );
                       },
                     ),
                   ],
@@ -159,73 +170,4 @@ class _HadithViewState extends State<HadithView> {
     );
   }
 
-  Future<dynamic> showDialogAzkar(BuildContext context) {
-    return showDialog(
-      context: context,
-      builder: (context) {
-        return Center(
-          child: Column(
-            children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pop();
-                },
-                child: Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50),
-                        color: AppColors.gredient2),
-                    child: Icon(Icons.close)),
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height - 80,
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                // height: 500,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: AppColors.kBlackColor.withAlpha(0)),
-                child: ListView.builder(
-                    itemCount: azkari.length,
-                    itemBuilder: (context, index) {
-                      return GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            akr = azkari[index]['name'];
-                            indexUp = index;
-                            updateData(index);
-                          });
-                          Navigator.of(context).pop();
-                        },
-                        child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 20),
-                          margin: EdgeInsets.only(top: 10),
-                          alignment: Alignment.center,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              // color: AppColors.kGoldColor,
-                              gradient: LinearGradient(
-                                colors: [
-                                  AppColors.gredient1,
-                                  AppColors.gredient2,
-                                ],
-                              )),
-                          child: Text(
-                            textAlign: TextAlign.center,
-                            azkari[index]['name'],
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            style: AppStyle.janna18bold
-                                .copyWith(color: AppColors.kBlackColor),
-                          ),
-                        ),
-                      );
-                    }),
-              ),
-            ],
-          ),
-        );
-      },
-    );
-  }
 }

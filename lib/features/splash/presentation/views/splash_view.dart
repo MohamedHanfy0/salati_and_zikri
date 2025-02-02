@@ -18,8 +18,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     bool checkIntro =
         getIt<ServicesSharedPreferences>().getData(key: 'intro') ?? false;
-    print('3333333333333333333333');
-    print(checkIntro);
+
     checkIntro
         ? dyloadNavigat(context, '/navi')
         : dyloadNavigat(context, '/intro');
