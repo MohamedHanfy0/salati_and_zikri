@@ -5,7 +5,7 @@ import 'package:islami/core/utils/assets.dart';
 import 'package:islami/core/widgets/intro_app_bar_widget.dart';
 import 'package:islami/features/home/presentation/widgets/most_recently_list_widget.dart';
 import 'package:islami/features/home/presentation/widgets/most_recently_widget.dart';
-import 'package:islami/features/home/presentation/widgets/search_bar_widget.dart';
+import 'package:islami/core/widgets/search_bar_widget.dart';
 import 'package:islami/features/home/presentation/widgets/sura_list_widget.dart';
 
 class HomeView extends StatelessWidget {
@@ -31,7 +31,10 @@ class HomeView extends StatelessWidget {
               children: [
                 SizedBox(height: 20),
                 IntorAppBarWidget(),
-                SearchBarWidget(),
+                SearchBarWidget(
+                  hintText: 'اسم السورة',
+                  icon: Assets.assetsImagesItem1,
+                ),
                 MostRecently(
                   name: "في الآونة الأخيرة ",
                 ),

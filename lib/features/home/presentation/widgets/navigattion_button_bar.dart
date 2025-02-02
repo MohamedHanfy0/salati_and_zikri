@@ -3,7 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_style.dart';
 import 'package:islami/core/utils/assets.dart';
-import 'package:islami/features/hadith/presentation/views/hadith_view.dart';
+import 'package:islami/features/hadeth/presentation/views/hadeth_view.dart';
+import 'package:islami/features/subha/presentation/views/subha_view.dart';
 import 'package:islami/features/home/presentation/views/home_view.dart';
 import 'package:islami/features/quran/presentation/views/quran_view.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
@@ -40,8 +41,8 @@ class NavigattionButtonBar extends StatelessWidget {
 List<Widget> _buildScreens() {
   return [
     HomeView(),
-    QuranView(),
-    HadithView(),
+    HadethView(),
+    SubhaView(),
     HomeView(),
     HomeView(),
   ];
