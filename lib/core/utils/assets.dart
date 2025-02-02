@@ -18,9 +18,21 @@ class Assets {
   /// assets/images/bg-home.png
   static const String assetsImagesBgHome = "assets/images/bg-home.png";
 
+  /// Assets for assetsImagesCornerr1
+  /// assets/images/Cornerr1.png
+  static const String assetsImagesCornerr1 = "assets/images/Cornerr1.png";
+
+  /// Assets for assetsImagesCornerr2
+  /// assets/images/Cornerr2.png
+  static const String assetsImagesCornerr2 = "assets/images/Cornerr2.png";
+
   /// Assets for assetsImagesGlow
   /// assets/images/Glow.png
   static const String assetsImagesGlow = "assets/images/Glow.png";
+
+  /// Assets for assetsImagesHadithCardBackGround
+  /// assets/images/HadithCardBackGround.png
+  static const String assetsImagesHadithCardBackGround = "assets/images/HadithCardBackGround.png";
 
   /// Assets for assetsImagesItem1
   /// assets/images/item1.svg
@@ -45,6 +57,10 @@ class Assets {
   /// Assets for assetsImagesKabba
   /// assets/images/kabba.png
   static const String assetsImagesKabba = "assets/images/kabba.png";
+
+  /// Assets for assetsImagesMosquBottom
+  /// assets/images/mosquBottom.png
+  static const String assetsImagesMosquBottom = "assets/images/mosquBottom.png";
 
   /// Assets for assetsImagesMosque
   /// assets/images/Mosque.png
