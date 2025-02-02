@@ -43,8 +43,6 @@ class IntroPageView extends StatelessWidget {
         controller: controller,
         itemCount: intro.length,
         itemBuilder: (BuildContext context, int index) {
-          print('-----------------------');
-          print(index);
           return Column(
             children: [
               SizedBox(

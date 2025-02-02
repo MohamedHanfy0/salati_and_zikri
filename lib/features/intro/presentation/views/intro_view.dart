@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/features/intro/presentation/widgets/intor_page_view.dart';
-import 'package:islami/features/intro/presentation/widgets/intro_app_bar_widget.dart';
+import 'package:islami/core/widgets/intro_app_bar_widget.dart';
 
 class IntroView extends StatelessWidget {
   const IntroView({super.key});

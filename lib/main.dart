@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:islami/core/routes/router.dart';
 import 'package:islami/core/services/services_locator.dart';
 import 'package:islami/core/services/services_shared_preferences.dart';
 import 'package:islami/core/utils/app_colors.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

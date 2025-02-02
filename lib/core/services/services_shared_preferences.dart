@@ -1,14 +1,14 @@
+import 'dart:convert';
+
+import 'package:islami/features/hadith/model/azkari_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ServicesSharedPreferences {
   static late SharedPreferences sharedPreferences;
 
-
-   init() async {
+  init() async {
     sharedPreferences = await SharedPreferences.getInstance();
-   }
-
-
+  }
 
   Future<void> saveData(String key, dynamic saveData) async {
     if (saveData.runtimeType == String) {
@@ -20,8 +20,22 @@ class ServicesSharedPreferences {
     }
   }
 
- dynamic getData({required String key}) {
+  Future<void> saveAzkari(List<Map<String, dynamic>> azkr) async {
+    String azkari = jsonEncode(azkr);
+    await sharedPreferences.setString('azkari', azkari);
+  }
+
+  getAzkari() {
+    
+    String? azkariDecode = sharedPreferences.getString('azkari');
+
+    if (azkariDecode != null) {
+      return jsonDecode(azkariDecode);
+    }
+    return null;
+  }
+
+  dynamic getData({required String key}) {
     return sharedPreferences.get(key);
   }
- 
 }

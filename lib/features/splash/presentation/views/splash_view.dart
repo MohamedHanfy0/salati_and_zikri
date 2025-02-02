@@ -21,7 +21,7 @@ class _SplashViewState extends State<SplashView> {
     print('3333333333333333333333');
     print(checkIntro);
     checkIntro
-        ? dyloadNavigat(context, '/home')
+        ? dyloadNavigat(context, '/navi')
         : dyloadNavigat(context, '/intro');
     super.initState();
   }

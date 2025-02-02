@@ -25,4 +25,14 @@ class AppStyle {
       fontSize: 24,
       fontWeight: FontWeight.bold,
       color: AppColors.kGoldColor);
+    static const TextStyle janna12bold = TextStyle(
+      fontFamily: 'Janna',
+      fontSize: 12,
+      fontWeight: FontWeight.bold,
+      color: Colors.white);
+     static const TextStyle janna36bold = TextStyle(
+      fontFamily: 'Janna',
+      fontSize: 36,
+      fontWeight: FontWeight.bold,
+      color: Colors.white);
 }
