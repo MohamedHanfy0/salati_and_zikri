@@ -10,7 +10,9 @@ class ItemRadioWidget extends StatelessWidget {
     required this.play,
     required this.like,
     required this.volum,
-    required this.mute, required this.isPly, required this.disLike,
+    required this.mute,
+    required this.isPly,
+    required this.disLike,
   });
 
   final String name;
@@ -30,66 +32,81 @@ class ItemRadioWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: AppColors.kGoldColor,
-        image: DecorationImage(
-            image: AssetImage(Assets.assetsImagesMosquBottom),
-            fit: BoxFit.fitWidth,
-            opacity: 0.5,
-            alignment: Alignment.bottomCenter),
-      ),
-      child: Column(
        
-        children: [
-          SizedBox(
-            height: 15,
-          ),
-          Text(
-            name,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            textDirection: TextDirection.rtl,
-            textAlign: TextAlign.center,
-            style: AppStyle.janna24bold
-                .copyWith(color: AppColors.kBlackColor, fontSize: 20),
-          ),
-          SizedBox(
-            height: 32,
-          ),
-          Row(
-            spacing: 25,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              GestureDetector(
-                onTap: like,
-                child: Image.asset(
-                  disLike ?
-                  Assets.assetsImagesVector : Assets.assetsImagesDislike,
-                  width: 32,
-                  height: 29,
-                ),
-              ),
-              GestureDetector(
-                onTap: play,
-                child: Image.asset(
-                  isPly ? Assets.assetsImagesPause : Assets.assetsImagesPolygon,
-                  width: 31,
-                  height: 31,
-                ),
-              ),
-              GestureDetector(
-                onTap: volum,
-                child: Image.asset(
-                  // Assets.assetsImagesVolumeHigh,
-                  mute
-                      ? Assets.assetsImagesMute
-                      : Assets.assetsImagesVolumeHigh,
-                  width: 30,
-                  height: 30,
-                ),
-              ),
-            ],
-          ),
-        ],
       ),
+      child: Stack(children: [
+        Positioned(
+          top: 50,
+          child: SizedBox(
+            // alignment: Alignment.bottomCenter,
+            // color: Colors.amber,
+            height: isPly ? 120 : 97,
+            width: 390,
+            child: Image.asset(
+              isPly ? Assets.assetsImagesMusic : Assets.assetsImagesMosquBottom,
+              width: double.infinity,
+              fit: BoxFit.fitHeight,
+              alignment: Alignment.bottomCenter,
+            ),
+          ),
+        ),
+        Column(
+          children: [
+            SizedBox(
+              height: 15,
+            ),
+            Text(
+              name,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              textDirection: TextDirection.rtl,
+              textAlign: TextAlign.center,
+              style: AppStyle.janna24bold
+                  .copyWith(color: AppColors.kBlackColor, fontSize: 20),
+            ),
+            SizedBox(
+              height: 32,
+            ),
+            Row(
+              spacing: 25,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                GestureDetector(
+                  onTap: like,
+                  child: Image.asset(
+                    disLike
+                        ? Assets.assetsImagesVector
+                        : Assets.assetsImagesDislike,
+                    width: 32,
+                    height: 29,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: play,
+                  child: Image.asset(
+                    isPly
+                        ? Assets.assetsImagesPause
+                        : Assets.assetsImagesPolygon,
+                    width: 31,
+                    height: 31,
+                  ),
+                ),
+                GestureDetector(
+                  onTap: volum,
+                  child: Image.asset(
+                    // Assets.assetsImagesVolumeHigh,
+                    mute
+                        ? Assets.assetsImagesMute
+                        : Assets.assetsImagesVolumeHigh,
+                    width: 30,
+                    height: 30,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ]),
     );
   }
 }
