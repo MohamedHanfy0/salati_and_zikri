@@ -18,6 +18,10 @@ class Assets {
   /// assets/images/bg-home.png
   static const String assetsImagesBgHome = "assets/images/bg-home.png";
 
+  /// Assets for assetsImagesBgRadio
+  /// assets/images/bg-radio.png
+  static const String assetsImagesBgRadio = "assets/images/bg-radio.png";
+
   /// Assets for assetsImagesCornerr1
   /// assets/images/Cornerr1.png
   static const String assetsImagesCornerr1 = "assets/images/Cornerr1.png";
@@ -25,6 +29,10 @@ class Assets {
   /// Assets for assetsImagesCornerr2
   /// assets/images/Cornerr2.png
   static const String assetsImagesCornerr2 = "assets/images/Cornerr2.png";
+
+  /// Assets for assetsImagesDislike
+  /// assets/images/dislike.png
+  static const String assetsImagesDislike = "assets/images/dislike.png";
 
   /// Assets for assetsImagesGlow
   /// assets/images/Glow.png
@@ -66,9 +74,25 @@ class Assets {
   /// assets/images/Mosque.png
   static const String assetsImagesMosque = "assets/images/Mosque.png";
 
+  /// Assets for assetsImagesMusic
+  /// assets/images/music.png
+  static const String assetsImagesMusic = "assets/images/music.png";
+
+  /// Assets for assetsImagesMute
+  /// assets/images/mute.png
+  static const String assetsImagesMute = "assets/images/mute.png";
+
   /// Assets for assetsImagesOBJECTS
   /// assets/images/OBJECTS.svg
   static const String assetsImagesOBJECTS = "assets/images/OBJECTS.svg";
+
+  /// Assets for assetsImagesPause
+  /// assets/images/Pause.png
+  static const String assetsImagesPause = "assets/images/Pause.png";
+
+  /// Assets for assetsImagesPolygon
+  /// assets/images/Polygon.png
+  static const String assetsImagesPolygon = "assets/images/Polygon.png";
 
   /// Assets for assetsImagesQuran
   /// assets/images/quran.png
@@ -85,6 +109,14 @@ class Assets {
   /// Assets for assetsImagesShape
   /// assets/images/shape.png
   static const String assetsImagesShape = "assets/images/shape.png";
+
+  /// Assets for assetsImagesVector
+  /// assets/images/Vector.png
+  static const String assetsImagesVector = "assets/images/Vector.png";
+
+  /// Assets for assetsImagesVolumeHigh
+  /// assets/images/VolumeHigh.png
+  static const String assetsImagesVolumeHigh = "assets/images/VolumeHigh.png";
 
   /// Assets for assetsImagesWelcome1
   /// assets/images/welcome1.png

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
-import 'package:islami/core/utils/app_style.dart';
 import 'package:islami/core/utils/assets.dart';
 import 'package:islami/core/widgets/intro_app_bar_widget.dart';
 import 'package:islami/features/home/presentation/widgets/most_recently_list_widget.dart';
@@ -8,9 +7,15 @@ import 'package:islami/features/home/presentation/widgets/most_recently_widget.d
 import 'package:islami/core/widgets/search_bar_widget.dart';
 import 'package:islami/features/home/presentation/widgets/sura_list_widget.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
+  TextEditingController textEditingController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +38,7 @@ class HomeView extends StatelessWidget {
                 IntorAppBarWidget(),
                 SearchBarWidget(
                   hintText: 'اسم السورة',
-                  icon: Assets.assetsImagesItem1,
+                  icon: Assets.assetsImagesItem1, seach: (value) {  }, controller: textEditingController,
                 ),
                 MostRecently(
                   name: "في الآونة الأخيرة ",

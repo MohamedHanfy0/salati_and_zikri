@@ -1,14 +1,19 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import 'package:islami/core/utils/app_colors.dart';
 
 class SearchBarWidget extends StatelessWidget {
   final String hintText;
   final String icon;
+  final void Function(String)? seach;
+  final TextEditingController controller;
   const SearchBarWidget({
     super.key,
     required this.hintText,
     required this.icon,
+    required this.seach, required this.controller,
   });
 
   @override
@@ -24,6 +29,7 @@ class SearchBarWidget extends StatelessWidget {
         border: Border.all(color: AppColors.kGoldColor, width: 1),
       ),
       child: TextField(
+        controller: controller,
         autofocus: false,
         cursorColor: AppColors.gredient2,
         textAlignVertical: TextAlignVertical.center,
@@ -32,6 +38,7 @@ class SearchBarWidget extends StatelessWidget {
             color: Colors.white,
             fontFamily: 'Janna',
             fontWeight: FontWeight.bold),
+        onChanged: seach,
         decoration: InputDecoration(
           hintText: hintText,
           hintTextDirection: TextDirection.rtl,
