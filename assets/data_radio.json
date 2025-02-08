@@ -2,7 +2,8 @@
   "radios": [
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 1,
       "name": "إبراهيم الأخضر",
       "url": "https://backup.qurango.net/radio/ibrahim_alakdar",
@@ -10,7 +11,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 2,
       "name": "شيخ أبو بكر الشاطري",
       "url": "https://backup.qurango.net/radio/shaik_abu_bakr_al_shatri",
@@ -18,7 +20,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 3,
       "name": "أحمد بن علي العجمي",
       "url": "https://backup.qurango.net/radio/ahmad_alajmy",
@@ -26,7 +29,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 4,
       "name": "أحمد الحواشي",
       "url": "https://backup.qurango.net/radio/ahmad_alhawashi",
@@ -34,7 +38,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 5,
       "name": "أحمد صابر",
       "url": "https://backup.qurango.net/radio/ahmad_saber",
@@ -42,7 +47,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 6,
       "name": "أحمد نعينع",
       "url": "https://backup.qurango.net/radio/ahmad_nauina",
@@ -50,7 +56,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 7,
       "name": "أكرم العلاقمي",
       "url": "https://backup.qurango.net/radio/akram_alalaqmi",
@@ -58,7 +65,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 8,
       "name": "إدريس أبكر",
       "url": "https://backup.qurango.net/radio/idrees_abkr",
@@ -66,7 +74,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 9,
       "name": "الزين محمد أحمد",
       "url": "https://backup.qurango.net/radio/alzain_mohammad_ahmad",
@@ -74,7 +83,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10,
       "name": "القارئ ياسين- رواية ورش عن نافع",
       "url": "https://backup.qurango.net/radio/alqaria_yassen",
@@ -82,7 +92,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 11,
       "name": "العيون الكوشي - رواية ورش عن نافع",
       "url": "https://backup.qurango.net/radio/aloyoon_alkoshi",
@@ -90,7 +101,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 12,
       "name": "توفيق الصايغ",
       "url": "https://backup.qurango.net/radio/tawfeeq_assayegh",
@@ -98,7 +110,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 13,
       "name": "جمال شاكر عبدالله",
       "url": "https://backup.qurango.net/radio/jamal_shaker_abdullah",
@@ -106,7 +119,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 14,
       "name": "خالد القحطاني",
       "url": "https://backup.qurango.net/radio/khaled_alqahtani",
@@ -114,7 +128,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 15,
       "name": "خالد عبدالكافي",
       "url": "https://backup.qurango.net/radio/khalid_abdulkafi",
@@ -122,7 +137,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 16,
       "name": "خليفة الطنيجي",
       "url": "https://backup.qurango.net/radio/khalifa_altunaiji",
@@ -130,7 +146,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 17,
       "name": "سعد الغامدي",
       "url": "https://backup.qurango.net/radio/saad_alghamdi",
@@ -138,7 +155,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 18,
       "name": "سعود الشريم",
       "url": "https://backup.qurango.net/radio/saud_alshuraim",
@@ -146,7 +164,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 19,
       "name": "سهل ياسين",
       "url": "https://backup.qurango.net/radio/sahl_yassin",
@@ -154,7 +173,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 20,
       "name": "زكي داغستاني",
       "url": "https://backup.qurango.net/radio/zaki_daghistani",
@@ -162,7 +182,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 21,
       "name": "سيد رمضان",
       "url": "https://backup.qurango.net/radio/sayeed_ramadan",
@@ -170,7 +191,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 22,
       "name": "شيرزاد عبدالرحمن طاهر",
       "url": "https://backup.qurango.net/radio/shirazad_taher",
@@ -178,7 +200,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 23,
       "name": "صابر عبدالحكم",
       "url": "https://backup.qurango.net/radio/saber_abdulhakm",
@@ -186,7 +209,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 24,
       "name": "صلاح البدير",
       "url": "https://backup.qurango.net/radio/salah_albudair",
@@ -194,7 +218,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 25,
       "name": "صلاح الهاشم",
       "url": "https://backup.qurango.net/radio/salah_alhashim",
@@ -202,7 +227,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 26,
       "name": "صلاح بو خاطر",
       "url": "https://backup.qurango.net/radio/slaah_bukhatir",
@@ -210,7 +236,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 27,
       "name": "عادل ريان",
       "url": "https://backup.qurango.net/radio/adel_ryyan",
@@ -218,7 +245,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 28,
       "name": "عبدالبارئ الثبيتي",
       "url": "https://backup.qurango.net/radio/abdelbari_altoubayti",
@@ -226,7 +254,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 29,
       "name": "عبدالبارئ محمد",
       "url": "https://backup.qurango.net/radio/abdulbari_mohammad",
@@ -234,7 +263,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 30,
       "name": "عبدالباسط عبدالصمد ",
       "url": "https://backup.qurango.net/radio/abdulbasit_abdulsamad_mojawwad",
@@ -242,7 +272,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 31,
       "name": "عبدالباسط عبدالصمد - رواية ورش عن نافع",
       "url": "https://backup.qurango.net/radio/abdulbasit_abdulsamad_warsh",
@@ -250,7 +281,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 32,
       "name": "عبدالباسط عبدالصمد ",
       "url": "https://backup.qurango.net/radio/abdulbasit_abdulsamad",
@@ -258,7 +290,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 33,
       "name": "عبدالرحمن السديس",
       "url": "https://backup.qurango.net/radio/abdulrahman_alsudaes",
@@ -266,7 +299,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 34,
       "name": "عبدالعزيز الأحمد",
       "url": "https://backup.qurango.net/radio/abdul_aziz_alahmad",
@@ -274,7 +308,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 35,
       "name": "عبدالله المطرود",
       "url": "https://backup.qurango.net/radio/abdullah_almattrod",
@@ -282,7 +317,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 36,
       "name": "عبدالله بصفر",
       "url": "https://backup.qurango.net/radio/abdullah_basfer",
@@ -290,7 +326,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 37,
       "name": "عبدالله خياط",
       "url": "https://backup.qurango.net/radio/abdullah_khayyat",
@@ -298,7 +335,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 38,
       "name": "عبدالله عواد الجهني",
       "url": "https://backup.qurango.net/radio/abdullah_aljohany",
@@ -306,7 +344,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 39,
       "name": "عبدالرشيد صوفي - رواية السوسي عن أبي عمرو",
       "url": "https://backup.qurango.net/radio/abdulrasheed_soufi_assosi",
@@ -314,7 +353,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 40,
       "name": "عبدالرشيد صوفي - رواية خلف عن حمزة",
       "url": "https://backup.qurango.net/radio/abdulrasheed_soufi_khalaf",
@@ -322,7 +362,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 41,
       "name": "عبدالمحسن الحارثي",
       "url": "https://backup.qurango.net/radio/abdulmohsin_alharthy",
@@ -330,7 +371,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 42,
       "name": "عبدالمحسن القاسم",
       "url": "https://backup.qurango.net/radio/abdulmohsen_alqasim",
@@ -338,7 +380,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 43,
       "name": "عبدالمحسن العبيكان",
       "url": "https://backup.qurango.net/radio/abdulmohsin_alobaikan",
@@ -346,7 +389,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 44,
       "name": "عبدالهادي أحمد كناكري",
       "url": "https://backup.qurango.net/radio/abdulhadi_kanakeri",
@@ -354,7 +398,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 45,
       "name": "عبدالودود حنيف",
       "url": "https://backup.qurango.net/radio/abdulwadood_haneef",
@@ -362,7 +407,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 46,
       "name": "علي الحذيفي",
       "url": "https://backup.qurango.net/radio/ali_alhuthaifi",
@@ -370,7 +416,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 48,
       "name": "علي جابر",
       "url": "https://backup.qurango.net/radio/ali_jaber",
@@ -378,7 +425,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 49,
       "name": "علي حجاج السويسي",
       "url": "https://backup.qurango.net/radio/ali_hajjaj_alsouasi",
@@ -386,7 +434,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 50,
       "name": "عماد زهير حافظ",
       "url": "https://backup.qurango.net/radio/emad_hafez",
@@ -394,7 +443,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 51,
       "name": "عمر القزابري - رواية ورش عن نافع",
       "url": "https://backup.qurango.net/radio/omar_alqazabri",
@@ -402,7 +452,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 52,
       "name": "فارس عباد",
       "url": "https://backup.qurango.net/radio/fares_abbad",
@@ -410,7 +461,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 53,
       "name": "ناصر القطامي",
       "url": "https://backup.qurango.net/radio/nasser_alqatami",
@@ -418,7 +470,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 54,
       "name": "نبيل الرفاعي",
       "url": "https://backup.qurango.net/radio/nabil_al_rifay",
@@ -426,7 +479,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 55,
       "name": "نعمة الحسان",
       "url": "https://backup.qurango.net/radio/neamah_alhassan",
@@ -434,7 +488,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 56,
       "name": "هاني الرفاعي",
       "url": "https://backup.qurango.net/radio/hani_arrifai",
@@ -442,7 +497,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 57,
       "name": "وليد النائحي - رواية قالون عن نافع من طريق أبي نشيط",
       "url": "https://backup.qurango.net/radio/waleed_alnaehi",
@@ -450,7 +506,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 58,
       "name": "ياسر الدوسري",
       "url": "https://backup.qurango.net/radio/yasser_aldosari",
@@ -458,7 +515,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 59,
       "name": "ياسر القرشي",
       "url": "https://backup.qurango.net/radio/yasser_alqurashi",
@@ -466,7 +524,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 60,
       "name": "ياسر المزروعي - قراءة يعقوب الحضرمي بروايتي رويس وروح ",
       "url": "https://backup.qurango.net/radio/yasser_almazroyee",
@@ -474,7 +533,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 61,
       "name": "يحيى حوا",
       "url": "https://backup.qurango.net/radio/yahya_hawwa",
@@ -482,7 +542,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 62,
       "name": "يوسف الشويعي",
       "url": "https://backup.qurango.net/radio/yousef_alshoaey",
@@ -490,7 +551,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 63,
       "name": "ماهر المعيقلي",
       "url": "https://backup.qurango.net/radio/maher",
@@ -498,7 +560,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 64,
       "name": "محمد الطبلاوي",
       "url": "https://backup.qurango.net/radio/mohammad_altablaway",
@@ -506,7 +569,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 65,
       "name": "محمد اللحيدان",
       "url": "https://backup.qurango.net/radio/mohammed_allohaidan",
@@ -514,7 +578,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 66,
       "name": "محمد أيوب",
       "url": "https://backup.qurango.net/radio/mohammed_ayyub",
@@ -522,7 +587,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 67,
       "name": "محمد صالح عالم شاه",
       "url": "https://backup.qurango.net/radio/mohammad_saleh_alim_shah",
@@ -530,7 +596,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 68,
       "name": "محمد جبريل",
       "url": "https://backup.qurango.net/radio/mohammed_jibreel",
@@ -538,7 +605,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 69,
       "name": "محمد صديق المنشاوي",
       "url": "https://backup.qurango.net/radio/mohammed_siddiq_alminshawi",
@@ -546,7 +614,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 70,
       "name": "محمد صديق المنشاوي",
       "url": "https://backup.qurango.net/radio/mohammed_siddiq_alminshawi_mojawwad",
@@ -554,7 +623,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 71,
       "name": "محمد عبدالكريم",
       "url": "https://backup.qurango.net/radio/mohammad_abdullkarem",
@@ -562,7 +632,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 72,
       "name": "محمد عبدالحكيم العبدالله - رواية البزي وقنبل عن ابن كثير",
       "url": "https://backup.qurango.net/radio/mohammad_alabdullah_albizi",
@@ -570,7 +641,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 73,
       "name": "محمد عبدالحكيم العبدالله - رواية الدوري عن الكسائي",
       "url": "https://backup.qurango.net/radio/mohammad_alabdullah_aldorai",
@@ -578,7 +650,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 74,
       "name": "محمود خليل الحصري",
       "url": "https://backup.qurango.net/radio/mahmoud_khalil_alhussary",
@@ -586,7 +659,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 75,
       "name": "محمود خليل الحصري",
       "url": "https://backup.qurango.net/radio/mahmoud_khalil_alhussary_mojawwad",
@@ -594,7 +668,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 76,
       "name": "محمود خليل الحصري - رواية ورش عن نافع",
       "url": "https://backup.qurango.net/radio/mahmoud_khalil_alhussary_warsh",
@@ -602,7 +677,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 77,
       "name": "محمود علي البنا",
       "url": "https://backup.qurango.net/radio/mahmoud_ali__albanna",
@@ -610,7 +686,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 78,
       "name": "محمود علي البنا",
       "url": "https://backup.qurango.net/radio/mahmoud_ali__albanna_mojawwad",
@@ -618,7 +695,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 79,
       "name": "مشاري العفاسي",
       "url": "https://backup.qurango.net/radio/mishary_alafasi",
@@ -626,7 +704,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 80,
       "name": "مصطفى إسماعيل",
       "url": "https://backup.qurango.net/radio/mustafa_ismail",
@@ -634,7 +713,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 81,
       "name": "مصطفى اللاهوني",
       "url": "https://backup.qurango.net/radio/mustafa_allahoni",
@@ -642,7 +722,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 82,
       "name": "مصطفى رعد العزاوي",
       "url": "https://backup.qurango.net/radio/mustafa_raad_alazawy",
@@ -650,7 +731,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 83,
       "name": "مفتاح السلطني - رواية الدوري عن أبي عمرو",
       "url": "https://backup.qurango.net/radio/muftah_alsaltany_aldori_an_abi_amr",
@@ -658,7 +740,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 84,
       "name": "ماهر شخاشيرو",
       "url": "https://backup.qurango.net/radio/maher_shakhashero",
@@ -666,7 +749,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 85,
       "name": "محمود الشيمي - رواية الدوري عن الكسائي",
       "url": "https://backup.qurango.net/radio/mahmood_alsheimy",
@@ -674,7 +758,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 86,
       "name": "خالد المهنا",
       "url": "https://backup.qurango.net/radio/khalid_almohana",
@@ -682,7 +767,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 87,
       "name": "عادل الكلباني",
       "url": "https://backup.qurango.net/radio/adel_alkhalbany",
@@ -690,7 +776,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 88,
       "name": "موسى بلال",
       "url": "https://backup.qurango.net/radio/mousa_bilal",
@@ -698,7 +785,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 89,
       "name": "حاتم فريد الواعر",
       "url": "https://backup.qurango.net/radio/hatem_fareed_alwaer",
@@ -706,7 +794,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 90,
       "name": "محمود الرفاعي",
       "url": "https://backup.qurango.net/radio/mahmood_al_rifai",
@@ -714,7 +803,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 91,
       "name": "إبراهيم الدوسري - رواية ورش عن نافع",
       "url": "https://backup.qurango.net/radio/ibrahim_aldosari",
@@ -722,7 +812,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 92,
       "name": "مفتاح السلطني - رواية الدوري عن الكسائي",
       "url": "https://backup.qurango.net/radio/muftah_alsaltany_aldorai",
@@ -730,7 +821,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 93,
       "name": "جمعان العصيمي",
       "url": "https://backup.qurango.net/radio/jamaan_alosaimi",
@@ -738,7 +830,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 94,
       "name": "مفتاح السلطني",
       "url": "https://backup.qurango.net/radio/muftah_alsaltany",
@@ -746,7 +839,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 95,
       "name": "يوسف بن نوح أحمد",
       "url": "https://backup.qurango.net/radio/yousef_bin_noah_ahmad",
@@ -754,7 +848,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 96,
       "name": "مفتاح السلطني - رواية ابن ذكوان عن ابن عامر",
       "url": "https://backup.qurango.net/radio/muftah_alsaltany_ibn_thakwan_an_ibn_amr",
@@ -762,7 +857,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 97,
       "name": "معيض الحارثي",
       "url": "https://backup.qurango.net/radio/moeedh_alharthi",
@@ -770,7 +866,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 98,
       "name": "محمد رشاد الشريف",
       "url": "https://backup.qurango.net/radio/mohammad_rashad_alshareef",
@@ -778,7 +875,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 99,
       "name": "أحمد الطرابلسي - رواية قالون عن نافع",
       "url": "https://backup.qurango.net/radio/ahmad_khader_altarabulsi",
@@ -786,7 +884,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 100,
       "name": "أحمد الطرابلسي",
       "url": "https://backup.qurango.net/radio/ahmed_altrabulsi",
@@ -794,7 +893,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 101,
       "name": "عبدالله الكندري",
       "url": "https://backup.qurango.net/radio/abdullah_alkandari",
@@ -802,7 +902,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 102,
       "name": "أحمد عامر",
       "url": "https://backup.qurango.net/radio/ahmed_amer",
@@ -810,7 +911,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 103,
       "name": "محمد عثمان خان ( من الهند )",
       "url": "https://backup.qurango.net/radio/mohammed_osman_khan",
@@ -818,7 +920,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 104,
       "name": "الدوكالي محمد العالم - رواية قالون عن نافع",
       "url": "https://backup.qurango.net/radio/addokali_mohammad_alalim",
@@ -826,7 +929,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 105,
       "name": "محمد عبدالكريم - رواية ورش عن نافع من طريق أبي بكر الأصبهاني",
       "url": "https://backup.qurango.net/radio/mohammad_abdullkarem_alasbahani",
@@ -834,7 +938,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 106,
       "name": "الفاتح محمد الزبير- رواية الدوري عن أبي عمرو",
       "url": "https://backup.qurango.net/radio/alfateh_alzubair",
@@ -842,7 +947,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 107,
       "name": "طارق دعوب - رواية قالون عن نافع",
       "url": "https://backup.qurango.net/radio/tareq_abdulgani_daawob",
@@ -850,7 +956,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 108,
       "name": "-الإذاعة العامة - اذاعة متنوعة لمختلف القراء",
       "url": "https://backup.qurango.net/radio/mix",
@@ -858,7 +965,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 109,
       "name": "-تلاوات خاشعة-",
       "url": "https://backup.qurango.net/radio/salma",
@@ -866,7 +974,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 110,
       "name": "تكبيرات العيد",
       "url": "https://backup.qurango.net/radio/eid",
@@ -874,7 +983,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 111,
       "name": "عبدالرحمن الماجد",
       "url": "https://backup.qurango.net/radio/abdulrahman_almajed",
@@ -882,7 +992,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 112,
       "name": "ترجمة معاني القرآن باللغة الفارسية",
       "url": "https://backup.qurango.net/radio/translation_quran_farsi",
@@ -890,7 +1001,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 113,
       "name": "الفتاوى",
       "url": "https://backup.qurango.net/radio/fatwa",
@@ -898,7 +1010,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 114,
       "name": "الرقية الشرعية",
       "url": "https://backup.qurango.net/radio/roqiah",
@@ -906,7 +1019,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 115,
       "name": "--سورة البقرة - لعدد من القراء",
       "url": "https://backup.qurango.net/radio/albaqarah",
@@ -914,7 +1028,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 116,
       "name": "--تفسير القران الكريم--",
       "url": "https://backup.qurango.net/radio/tafseer",
@@ -922,7 +1037,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 117,
       "name": "خالد الجليل",
       "url": "https://backup.qurango.net/radio/khalid_aljileel",
@@ -930,7 +1046,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 118,
       "name": "ناصر الماجد",
       "url": "https://backup.qurango.net/radio/nasser_almajed",
@@ -938,7 +1055,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 119,
       "name": "هيثم الجدعاني",
       "url": "https://backup.qurango.net/radio/hitham_aljadani",
@@ -946,7 +1064,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 120,
       "name": "أحمد خليل شاهين",
       "url": "https://backup.qurango.net/radio/ahmad_shaheen",
@@ -954,7 +1073,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 121,
       "name": "عبدالله الموسى",
       "url": "https://backup.qurango.net/radio/abdullah_almousa",
@@ -962,7 +1082,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 122,
       "name": "عبدالله الخلف",
       "url": "https://backup.qurango.net/radio/abdullah_alkhalaf",
@@ -970,7 +1091,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 123,
       "name": "---تراتيل قصيرة متميزة---",
       "url": "https://backup.qurango.net/radio/tarateel",
@@ -978,7 +1100,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 139,
       "name": "ماجد الزامل",
       "url": "https://backup.qurango.net/radio/majed_alzamel",
@@ -986,7 +1109,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 217,
       "name": "بندر بليله",
       "url": "https://backup.qurango.net/radio/bandar_balilah",
@@ -994,7 +1118,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 248,
       "name": "ناصر العصفور",
       "url": "https://backup.qurango.net/radio/nasser_alosfor",
@@ -1002,7 +1127,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 261,
       "name": "محمد أيوب - تلاوة مميزة",
       "url": "https://backup.qurango.net/radio/ayyoub2",
@@ -1010,7 +1136,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 265,
       "name": "أحمد ديبان",
       "url": "https://backup.qurango.net/radio/ahmad_deban",
@@ -1018,7 +1145,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 274,
       "name": "محمد أبوسنينة",
       "url": "https://backup.qurango.net/radio/sneineh",
@@ -1026,7 +1154,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 275,
       "name": "محمد الأمين قنيوة",
       "url": "https://backup.qurango.net/radio/qeniwa",
@@ -1034,7 +1163,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 287,
       "name": "عبدالرحمن الشحات",
       "url": "https://backup.qurango.net/radio/a_alshahhat",
@@ -1042,7 +1172,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 307,
       "name": "عبدالعزيز سحيم",
       "url": "https://backup.qurango.net/radio/a_sheim",
@@ -1050,7 +1181,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10902,
       "name": "--إذاعة آيات السكينة--",
       "url": "https://backup.qurango.net/radio/sakeenah",
@@ -1058,7 +1190,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10903,
       "name": "---إذاعة صور من حياة الصحابة رضوان الله عليهم---",
       "url": "https://backup.qurango.net/radio/sahabah",
@@ -1066,7 +1199,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10904,
       "name": "المختصر في تفسير القرآن الكريم",
       "url": "https://backup.qurango.net/radio/mukhtasartafsir",
@@ -1074,7 +1208,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10906,
       "name": "أذكار الصباح",
       "url": "https://backup.qurango.net/radio/athkar_sabah",
@@ -1082,7 +1217,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10907,
       "name": "أذكار المساء",
       "url": "https://backup.qurango.net/radio/athkar_masa",
@@ -1090,7 +1226,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10909,
       "name": "ترجمة معاني القرآن باللغة البوسنية",
       "url": "https://backup.qurango.net/radio/translation_quran_bosnia",
@@ -1098,7 +1235,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10911,
       "name": "ترجمة معاني القرآن باللغة الألبانية",
       "url": "https://backup.qurango.net/radio/translation_quran_albanian",
@@ -1106,7 +1244,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10912,
       "name": "ترجمة معاني القرآن باللغة البرتغالية",
       "url": "https://backup.qurango.net/radio/translation_quran_portuguese",
@@ -1114,7 +1253,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10913,
       "name": "ترجمة معاني القرآن باللغة المجرية",
       "url": "https://backup.qurango.net/radio/translation_quran_hungarian",
@@ -1122,7 +1262,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10914,
       "name": "ترجمة معاني القرآن باللغة الألمانية",
       "url": "https://backup.qurango.net/radio/translation_quran_german",
@@ -1130,7 +1271,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10915,
       "name": "ترجمة معاني القرآن باللغة الفرنسية",
       "url": "https://backup.qurango.net/radio/translation_quran_french",
@@ -1138,7 +1280,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10916,
       "name": "ترجمة معاني القرآن باللغة الإنجليزية - ترجمة والك-  القارئ عبدالباسط عبدالصمد",
       "url": "https://backup.qurango.net/radio/translation_quran_english_walk_basit",
@@ -1146,7 +1289,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10917,
       "name": "ترجمة معاني القرآن باللغة الإنجليزية -  القارئ عبدالباسط عبدالصمد",
       "url": "https://backup.qurango.net/radio/translation_quran_english_basit",
@@ -1154,7 +1298,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10918,
       "name": "ترجمة معاني القرآن باللغة الأوردية - القارئ عبدالرحمن السديس و سعود الشريم",
       "url": "https://backup.qurango.net/radio/translation_quran_urdu_sds_shur",
@@ -1162,7 +1307,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10919,
       "name": "ترجمة معاني القرآن الكريم باللغة الأوردية - القارئ عبدالباسط عبدالصمد",
       "url": "https://backup.qurango.net/radio/translation_quran_urdu_basit",
@@ -1170,7 +1316,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10920,
       "name": "ترجمة معاني القرآن باللغة الإنجليزية -  القارئ عبدالله صفر",
       "url": "https://backup.qurango.net/radio/translation_quran_english_bsfr",
@@ -1178,7 +1325,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10921,
       "name": "ترجمة معاني القرآن باللغة الأسبانية",
       "url": "https://backup.qurango.net/radio/translation_quran_spanish_afs",
@@ -1186,7 +1334,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10922,
       "name": "ترجمة معاني القرآن باللغة الأوردية - القارئ محمد المنشاوي",
       "url": "https://backup.qurango.net/radio/translation_quran_urdu_minsh",
@@ -1194,7 +1343,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10923,
       "name": "ترجمة معاني القرآن باللغة الأمازيغية",
       "url": "https://backup.qurango.net/radio/translation_quran_tamazight",
@@ -1202,7 +1352,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10924,
       "name": "ترجمة معاني القرآن باللغة الكردية",
       "url": "https://backup.qurango.net/radio/translation_quran_kurdish",
@@ -1210,7 +1361,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10925,
       "name": "ترجمة معاني القرآن باللغة التركية",
       "url": "https://backup.qurango.net/radio/translation_quran_turkish",
@@ -1218,7 +1370,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10926,
       "name": "ترجمة معاني القرآن باللغة الصينية",
       "url": "https://backup.qurango.net/radio/translation_quran_chinese",
@@ -1226,7 +1379,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10928,
       "name": "شهر رمضان المبارك",
       "url": "https://backup.qurango.net/radio/ramadan",
@@ -1234,7 +1388,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10929,
       "name": "ستة من شوال",
       "url": "https://backup.qurango.net/radio/SixDaysOfShawwal",
@@ -1242,7 +1397,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10930,
       "name": "يوم عاشوراء",
       "url": "https://backup.qurango.net/radio/TheDayofAshoora",
@@ -1250,7 +1406,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10931,
       "name": "ترجمة معاني القرآن باللغة الكورية",
       "url": "https://backup.qurango.net/radio/translation_quran_Korean",
@@ -1258,7 +1415,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10932,
       "name": "سورة الملك",
       "url": "https://backup.qurango.net/radio/Surah_Al-Mulk",
@@ -1266,7 +1424,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10933,
       "name": "ترجمة معاني القرآن باللغة الروسية",
       "url": "https://backup.qurango.net/radio/translation_quran_Russia",
@@ -1274,7 +1433,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 10934,
       "name": "ترجمة معاني القرآن باللغة الهوسا",
       "url": "https://backup.qurango.net/radio/translation_quran_Hausa",
@@ -1282,7 +1442,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 21114,
       "name": "في ظلال السيرة النبوية - 400 حلقة عن سيرة نبينا محمد صلى الله عليه وسلم",
       "url": "https://backup.qurango.net/radio/fi_zilal_alsiyra",
@@ -1290,7 +1451,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 21115,
       "name": "المختصر في السيرة النبوية - حلقات مختصرة عن سيرة نبيّنا محمد صلى الله عليه وسلم",
       "url": "https://backup.qurango.net/radio/almukhtasar_fi_alsiyra",
@@ -1298,7 +1460,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 21116,
       "name": "كتاب الاختيارات الفقهية في مسائل العبادات والمعاملات من فتاوى الشيخ الإمام ابن باز -رحمه لله",
       "url": "https://backup.qurango.net/radio/alaikhtiarat_alfiqhayh_bin_baz",
@@ -1306,7 +1469,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 21117,
       "name": "تفسير القرآن الكريم - الخلاصة من تفسير الطبري",
       "url": "https://backup.qurango.net/radio/tabri",
@@ -1314,7 +1478,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 21118,
       "name": "المختصر في تفسير القرآن الكريم باللغة الأردية",
       "url": "https://backup.qurango.net/radio/mokhtasr-urdo",
@@ -1322,7 +1487,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 109032,
       "name": "ترجمة معاني القرآن باللغة اليونانية",
       "url": "https://backup.qurango.net/radio/translation_quran_greek",
@@ -1330,7 +1496,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 109037,
       "name": "عشر ذي الحجة",
       "url": "https://backup.qurango.net/radio/ten_dhul_hijjah",
@@ -1338,7 +1505,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 109040,
       "name": "المختصر في تفسير القرآن الكريم باللغة القيرقيزية",
       "url": "https://backup.qurango.net/radio/mokhtasr-grgstan",
@@ -1346,7 +1514,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 109044,
       "name": "المختصر في تفسير القرآن الكريم باللغة الهوساوية",
       "url": "https://backup.qurango.net/radio/mokhtasr-husa",
@@ -1354,7 +1523,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 109046,
       "name": "ترجمة معاني القرآن باللغة الفارسية - أهل القرآن",
       "url": "https://qurango.net/radio/farsi-trans",
@@ -1362,7 +1532,8 @@
     },
     {
       "mute": false,
-      "like": false, "isPlaying":false,
+      "like": false,
+      "isPlaying": false,
       "id": 109048,
       "name": "تدبر معاني القرآن باللغة الفارسية - أهل القرآن",
       "url": "https://qurango.net/radio/farsi-tadabor",

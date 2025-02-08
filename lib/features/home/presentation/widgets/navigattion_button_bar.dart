@@ -5,10 +5,12 @@ import 'package:islami/core/utils/app_style.dart';
 import 'package:islami/core/utils/assets.dart';
 import 'package:islami/features/hadeth/presentation/cubit/hadeth_cubit.dart';
 import 'package:islami/features/hadeth/presentation/views/hadeth_view.dart';
+import 'package:islami/features/home/presentation/cubit/home_cubit.dart';
 import 'package:islami/features/radio/presentation/cubit/radio_cubit.dart';
 import 'package:islami/features/radio/presentation/views/radio_view.dart';
 import 'package:islami/features/subha/presentation/views/subha_view.dart';
 import 'package:islami/features/home/presentation/views/home_view.dart';
+import 'package:islami/features/time_and_azkari/presentation/views/time_and_azkari.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -43,7 +45,10 @@ class NavigattionButtonBar extends StatelessWidget {
 
 List<Widget> _buildScreens() {
   return [
-    HomeView(),
+    BlocProvider(
+      create: (context) => HomeCubit()..loadJsonAsset(),
+      child: HomeView(),
+    ),
     BlocProvider(
       create: (context) => HadethCubit()..loadHaiths(),
       child: HadethView(),
@@ -53,7 +58,7 @@ List<Widget> _buildScreens() {
       create: (context) => RadioCubit()..loadRadio(),
       child: RadioView(),
     ),
-    HomeView(),
+    TimeAndAzkari(),
   ];
 }
 

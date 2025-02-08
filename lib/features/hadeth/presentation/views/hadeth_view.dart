@@ -1,6 +1,4 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/assets.dart';
@@ -23,7 +21,6 @@ class _HadethViewState extends State<HadethView> {
   List _hadeht = [];
   bool books = true;
   bool hadeth = false;
-
   void _filterData(int index, List hadiths) {
     setState(() {
       _hadeht = hadiths.where((item) => item['chapterId'] == index).toList();
@@ -88,7 +85,7 @@ class _HadethViewState extends State<HadethView> {
                             _hadeht = [];
                           }
                         });
-                        // searchHadeth(value);
+                        
                       },
                       controller: textEditingController,
                     );

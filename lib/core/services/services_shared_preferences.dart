@@ -19,21 +19,19 @@ class ServicesSharedPreferences {
     }
   }
 
-  Future<void> saveAzkari(List<Map<String, dynamic>> azkr) async {
+  Future<void> saveJsonData(String key, List azkr) async {
     String azkari = jsonEncode(azkr);
-    await sharedPreferences.setString('azkari', azkari);
+    await sharedPreferences.setString(key, azkari);
   }
 
-   getAzkari() {
-    
-    String? azkariDecode = sharedPreferences.getString('azkari');
+  getJsonData(String key) {
+    String? azkariDecode = sharedPreferences.getString(key);
 
     if (azkariDecode != null) {
       return jsonDecode(azkariDecode);
     } else {
-        return [];
+      return [];
     }
-  
   }
 
   dynamic getData({required String key}) {

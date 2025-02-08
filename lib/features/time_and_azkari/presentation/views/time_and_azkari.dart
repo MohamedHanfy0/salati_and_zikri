@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class QuranView extends StatelessWidget {
-  const QuranView({super.key});
+class TimeAndAzkari extends StatelessWidget {
+  const TimeAndAzkari({super.key});
 
   @override
   Widget build(BuildContext context) {

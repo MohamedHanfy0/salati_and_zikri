@@ -42,15 +42,16 @@ class _SubhaViewState extends State<SubhaView> {
 
   saveData() {
     updateAzkari[indexUp]['number'] = numberSubha;
-    pref.saveAzkari(updateAzkari);
+    pref.saveJsonData('azkari', updateAzkari);
   }
 
   updateData(int indexNumber) {
-    if (pref.getAzkari().isEmpty) {
-      pref.saveAzkari(azkari);
+    if (pref.getJsonData('azkari').isEmpty) {
+      pref.saveJsonData('azkari', azkari);
       updateAzkari.addAll(azkari);
     } else {
-      updateAzkari = List<Map<String, dynamic>>.from(pref.getAzkari());
+      updateAzkari =
+          List<Map<String, dynamic>>.from(pref.getJsonData('azkari'));
 
       akr = updateAzkari[indexNumber]['name'];
       numberSubha = updateAzkari[indexNumber]['number'];
@@ -71,7 +72,6 @@ class _SubhaViewState extends State<SubhaView> {
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage(Assets.assetsImagesSebhaBackground),
-              
               fit: BoxFit.cover),
         ),
         child: Column(

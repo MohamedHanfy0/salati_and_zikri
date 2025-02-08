@@ -6,19 +6,19 @@ import 'package:islami/core/utils/assets.dart';
 class SuraList extends StatelessWidget {
   const SuraList({
     super.key,
+    required this.jsonData,
   });
-
+  final List jsonData;
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      // height: MediaQuery.of(context).size.height - 300.0,
       child: ListView.builder(
-        itemCount: 55,
+        itemCount: jsonData.length,
         itemBuilder: (context, index) {
           return SuraItem(
-            name: 'الفاتحة',
-            suraNumber: '٦٦',
-            artNumber: '٦٦٦',
+            name: jsonData[index]['name'],
+            suraNumber: jsonData[index]['number'],
+            artNumber: jsonData[index]['numberOfAyahs'],
           );
         },
       ),
@@ -28,8 +28,8 @@ class SuraList extends StatelessWidget {
 
 class SuraItem extends StatelessWidget {
   final String name;
-  final String suraNumber;
-  final String artNumber;
+  final int suraNumber;
+  final int artNumber;
   const SuraItem({
     super.key,
     required this.name,
@@ -46,7 +46,12 @@ class SuraItem extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Expanded(
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(0),
+                    color: AppColors.kBlackColor.withAlpha(450),
+                    border: Border.all(width: 1, color: AppColors.kBlackColor)),
                 child: Row(
                   // mainAxisAlignment: MainAxisAlignment.center,
                   spacing: 5,
@@ -56,33 +61,24 @@ class SuraItem extends StatelessWidget {
                       style: AppStyle.janna18bold
                           .copyWith(color: Colors.white, fontSize: 15),
                     ),
-                    Container(
-                      width: 22,
-                      height: 22,
-                      padding: EdgeInsets.all(5),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(
-                              Assets.assetsImagesArt,
-                            ),
-                            colorFilter: ColorFilter.mode(
-                                Colors.white, BlendMode.srcIn)),
-                      ),
-                      child: Text(
-                        artNumber,
-                        style: AppStyle.janna18bold
-                            .copyWith(color: Colors.white, fontSize: 9),
-                      ),
-                    )
+                    Text(
+                      artNumber.toString(),
+                      style: AppStyle.janna18bold
+                          .copyWith(color: Colors.white, fontSize: 12),
+                    ),
                   ],
                 ),
               ),
-              SizedBox(
-                child: Text(
-                  name,
-                  style: AppStyle.janna24bold
-                      .copyWith(color: Colors.white, fontSize: 20),
+              Expanded(
+                child: Container(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    name,
+                    style: AppStyle.janna24bold.copyWith(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'arsura'),
+                  ),
                 ),
               ),
               SizedBox(
@@ -102,7 +98,7 @@ class SuraItem extends StatelessWidget {
                   ),
                 ),
                 child: Text(
-                  "٦٦٦",
+                  suraNumber.toString(),
                   style: AppStyle.janna24bold
                       .copyWith(fontSize: 16, color: Colors.white),
                 ),

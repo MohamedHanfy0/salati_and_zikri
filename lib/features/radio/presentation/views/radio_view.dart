@@ -1,6 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:islami/core/services/services_shared_preferences.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/assets.dart';
 import 'package:islami/core/widgets/intro_app_bar_widget.dart';
@@ -16,62 +17,122 @@ class RadioView extends StatefulWidget {
 }
 
 class _RadioViewState extends State<RadioView> {
-  String activeCheck = 'radio';
-  int indexOld = 0;
-  // ignore: prefer_final_fields
-  AudioPlayer _audioPlayer = AudioPlayer();
+ 
+  
+  
+  AudioPlayer audioPlayer = AudioPlayer();
   bool isPlaying = false;
   String audioUrl = 'https://backup.qurango.net/radio/ahmad_alajmy';
+   String activeCheck = 'radio';
+  int indexOld = 0;
+  List radio = [];
+  final pref = ServicesSharedPreferences();
+  
+
+  
 
   void playAudio() {
     if (isPlaying) {
       stopAudio();
-      _audioPlayer.play(UrlSource(audioUrl));
+      audioPlayer.play(UrlSource(audioUrl));
       setState(() {
         isPlaying = true;
       });
     } else {
-      _audioPlayer.play(UrlSource(audioUrl));
+      audioPlayer.play(UrlSource(audioUrl));
       setState(() {
         isPlaying = true;
       });
     }
-    _audioPlayer.play(UrlSource(audioUrl));
+    audioPlayer.play(UrlSource(audioUrl));
     setState(() {
       isPlaying = true;
     });
   }
 
   void pauseAudio() {
-    _audioPlayer.pause();
+    audioPlayer.pause();
     setState(() {
       isPlaying = false;
     });
   }
 
   void stopAudio() {
-    _audioPlayer.stop();
+    audioPlayer.stop();
     setState(() {
       isPlaying = false;
     });
   }
 
-  // bool isMuted = false;
+  
   void toggleMute(bool isMuted) {
     if (isMuted) {
-      _audioPlayer.setVolume(1.0);
+      audioPlayer.setVolume(1.0);
     } else {
-      _audioPlayer.setVolume(0.0);
+      audioPlayer.setVolume(0.0);
     }
-    // setState(() {
-    //   isMuted = !isMuted;
-    // });
+  }
+
+  updateRadioData(List radio) {
+    pref.saveJsonData('radio', radio);
+    
   }
 
   @override
   void dispose() {
     super.dispose();
-    _audioPlayer.dispose();
+    audioPlayer.dispose();
+  }
+
+  PageController pageController = PageController();
+
+  
+
+  void handlePlay(int index) {
+    setState(() {
+      audioUrl = radio[index]['url'];
+      if (radio[index]['isPlaying'] == false) {
+        radio[indexOld]['isPlaying'] = false;
+        radio[index]['isPlaying'] = true;
+        indexOld = index;
+        playAudio();
+      } else {
+        radio[indexOld]['isPlaying'] = false;
+        indexOld = index;
+
+        stopAudio();
+      }
+      if (radio[index]['mute'] == false) {
+        toggleMute(true);
+      } else {
+        toggleMute(false);
+      }
+      updateRadioData(radio);
+    });
+  }
+
+  void handleLike(int index) {
+    setState(() {
+      if (radio[index]['like'] == false) {
+        radio[index]['like'] = true;
+      } else {
+        radio[index]['like'] = false;
+      }
+      updateRadioData(radio);
+    });
+  }
+
+  handleVolum(int index) {
+    setState(() {
+      if (radio[index]['mute'] == false) {
+        radio[index]['mute'] = true;
+        toggleMute(false);
+      } else {
+        radio[index]['mute'] = false;
+        toggleMute(true);
+      }
+      updateRadioData(radio);
+    });
   }
 
   @override
@@ -95,83 +156,85 @@ class _RadioViewState extends State<RadioView> {
               click1: () {
                 setState(() {
                   activeCheck = 'radio';
+                  pageController.previousPage(
+                      duration: Duration(microseconds: 500),
+                      curve: Curves.easeInOut);
                 });
               },
               click2: () {
                 setState(() {
                   activeCheck = 'hide';
+                  pageController.nextPage(
+                      duration: Duration(microseconds: 500),
+                      curve: Curves.easeInOut);
                 });
               },
             ),
-            BlocBuilder<RadioCubit, RadioState>(
-              builder: (context, state) {
-                if (state is RadioLoading) {
-                  return CircularProgressIndicator(
-                    color: AppColors.gredient2,
-                  );
-                } else if (state is RadioFailure) {
-                } else if (state is RadioLoaded) {
-                  return Expanded(
-                    child: ListView.builder(
-                      itemCount: state.radio.length,
-                      itemBuilder: (context, index) => ItemRadioWidget(
-                        name: state.radio[index]['name'],
-                        play: () {
+            Expanded(
+              child: BlocBuilder<RadioCubit, RadioState>(
+                builder: (context, state) {
+                  if (state is RadioLoading) {
+                    return CircularProgressIndicator(
+                      color: AppColors.gredient2,
+                    );
+                  } else if (state is RadioFailure) {
+                  } else if (state is RadioLoaded) {
+                    radio = state.radio;
+                    return PageView(
+                      controller: pageController,
+                      onPageChanged: (value) {
+                        if (value == 0) {
                           setState(() {
-                            audioUrl = state.radio[index]['url'];
-                            if (state.radio[index]['isPlaying'] == false) {
-                              state.radio[indexOld]['isPlaying'] = false;
-                              state.radio[index]['isPlaying'] = true;
-                              indexOld = index;
-                              playAudio();
-                            } else {
-                              state.radio[indexOld]['isPlaying'] = false;
-                              indexOld = index;
-
-                              stopAudio();
-                            }
-                            if (state.radio[index]['mute'] == false) {
-                              toggleMute(true);
-                            } else {
-                              toggleMute(false);
-                            }
+                            activeCheck = 'radio';
                           });
-                        },
-                        like: () {
+                        } else {
                           setState(() {
-                            if (state.radio[index]['like'] == false) {
-                              state.radio[index]['like'] = true;
-                              toggleMute(false);
-                            } else {
-                              state.radio[index]['like'] = false;
-                              toggleMute(true);
-                            }
+                            activeCheck = 'hide';
                           });
-                        },
-                        volum: () {
-                          setState(() {
-                            if (state.radio[index]['mute'] == false) {
-                              state.radio[index]['mute'] = true;
-                              toggleMute(false);
-                            } else {
-                              state.radio[index]['mute'] = false;
-                              toggleMute(true);
-                            }
-                          });
-                        },
-                        mute: state.radio[index]['mute'],
-                        isPly: state.radio[index]['isPlaying'],
-                        disLike: state.radio[index]['like'],
-                      ),
-                    ),
-                  );
-                }
-                return SizedBox();
-              },
-            )
+                        }
+                      },
+                      children: [
+                        ListView.builder(
+                         
+                          itemCount: radio.length,
+                          itemBuilder: (context, index) => ItemRadioWidget(
+                            name: radio[index]['name'],
+                            play: () => handlePlay(index),
+                            like: () => handleLike(index),
+                            volum: () => handleVolum(index),
+                            mute: radio[index]['mute'],
+                            isPly: radio[index]['isPlaying'],
+                            disLike: radio[index]['like'],
+                          ),
+                        ),
+                        ListView.builder(
+                          itemCount: radio.length,
+                          itemBuilder: (context, index) {
+                            return Visibility(
+                              visible: radio[index]['like'],
+                              child: ItemRadioWidget(
+                                name: radio[index]['name'],
+                                play: () => handlePlay(index),
+                                like: () => handleLike(index),
+                                volum: () => handleVolum(index),
+                                mute: radio[index]['mute'],
+                                isPly: radio[index]['isPlaying'],
+                                disLike: radio[index]['like'],
+                              ),
+                            );
+                          },
+                        )
+                      ],
+                    );
+                  }
+                  return SizedBox();
+                },
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+

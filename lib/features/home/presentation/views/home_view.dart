@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/assets.dart';
 import 'package:islami/core/widgets/intro_app_bar_widget.dart';
+import 'package:islami/features/home/presentation/cubit/home_cubit.dart';
 import 'package:islami/features/home/presentation/widgets/most_recently_list_widget.dart';
 import 'package:islami/features/home/presentation/widgets/most_recently_widget.dart';
 import 'package:islami/core/widgets/search_bar_widget.dart';
@@ -16,6 +18,7 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   TextEditingController textEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +33,7 @@ class _HomeViewState extends State<HomeView> {
           ),
           child: Container(
             decoration: BoxDecoration(
-              color: AppColors.kBlackColor.withAlpha(430),
+              color: AppColors.kBlackColor.withAlpha(490),
             ),
             child: Column(
               children: [
@@ -38,16 +41,31 @@ class _HomeViewState extends State<HomeView> {
                 IntorAppBarWidget(),
                 SearchBarWidget(
                   hintText: 'اسم السورة',
-                  icon: Assets.assetsImagesItem1, seach: (value) {  }, controller: textEditingController,
+                  icon: Assets.assetsImagesItem1,
+                  seach: (value) {},
+                  controller: textEditingController,
                 ),
-                MostRecently(
-                  name: "في الآونة الأخيرة ",
-                ),
-                MostRecentlyListWidget(),
+                // MostRecently(name: "في الآونة الأخيرة "),
+                // MostRecentlyListWidget(),
                 MostRecently(
                   name: "قائمة السور",
                 ),
-                SuraList()
+                BlocBuilder<HomeCubit, HomeState>(
+                  builder: (context, state) {
+                    if (state is HomeLoading) {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                    if (state is HomeFailure) {}
+                    if (state is HomeLoaded) {
+                      return SuraList(
+                        jsonData: state.quran,
+                      );
+                    }
+                    return SizedBox();
+                  },
+                )
               ],
             ),
           ),
