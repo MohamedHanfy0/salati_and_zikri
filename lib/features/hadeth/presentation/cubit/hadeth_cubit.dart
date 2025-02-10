@@ -9,6 +9,9 @@ part 'hadeth_state.dart';
 class HadethCubit extends Cubit<HadethState> {
   HadethCubit() : super(HadethInitial());
 
+
+  
+
   Future<void> loadHaiths() async {
     try {
       emit(HadethLoading());
@@ -16,7 +19,10 @@ class HadethCubit extends Cubit<HadethState> {
       Map jsonResponse = json.decode(jsonString);
       List chapters = jsonResponse['chapters'];
       List hadiths = jsonResponse['hadiths'];
-      emit(HadethLoaded(chapters: chapters, hadith: hadiths,));
+      emit(HadethLoaded(
+        chapters: chapters,
+        hadith: hadiths,
+      ));
     } catch (e) {
       emit(HadethFailure());
     }

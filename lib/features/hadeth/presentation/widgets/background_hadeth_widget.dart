@@ -18,13 +18,13 @@ class BackGroundHadethWidget extends StatelessWidget {
             height: 567,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage(Assets.assetsImagesBgHadeth))),
+                    image: AssetImage(Assets.assetsImagesElbsmalh))),
             child: Container(
               height: 567,
               decoration: BoxDecoration(
                 gradient: LinearGradient(colors: [
-                  AppColors.kBlackColor.withAlpha(450),
-                  AppColors.kBlackColor,
+                  AppColors.kBackgroundColor.withAlpha(450),
+                  AppColors.kBackgroundColor,
                 ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
               ),
             ),

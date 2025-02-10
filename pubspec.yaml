@@ -58,6 +58,15 @@ flutter:
     - family: arsura
       fonts:
         - asset: assets/fonts/arsura.ttf
+    - family: Almarai
+      fonts:
+        - asset: assets/fonts/Almarai-Regular.ttf
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+    - family: digital
+      fonts:
+        - asset: assets/fonts/digital.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

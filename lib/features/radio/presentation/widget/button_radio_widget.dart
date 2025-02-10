@@ -23,12 +23,15 @@ class ButtonRadioWidget extends StatelessWidget {
         height: 40,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-          color: active == 'radio' ? AppColors.kGoldColor : Colors.transparent,
+          color:
+              active == 'radio' ? AppColors.kPrimaryColor : Colors.transparent,
         ),
         child: Text(
           text,
-          style: AppStyle.janna18bold.copyWith(
-              color: active == 'radio' ? AppColors.kBlackColor : Colors.white),
+          style: AppStyle.almarai16bold.copyWith(
+              color: active == 'radio'
+                  ? AppColors.kBackgroundColor
+                  : Colors.white),
         ),
       ),
     );

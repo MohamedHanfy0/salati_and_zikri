@@ -22,15 +22,15 @@ class ButtonLabelIcon extends StatelessWidget {
         padding: EdgeInsets.all(10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: AppColors.gredient2,
+          color: AppColors.kPrimaryColor.withAlpha(40),
         ),
         child: Row(
           spacing: 5,
           children: [
             Text(
               text,
-              style:
-                  AppStyle.janna18bold.copyWith(color: AppColors.kBlackColor),
+              style: AppStyle.almarai16bold
+                  .copyWith(color: AppColors.kPrimaryColor),
             ),
             icon,
           ],

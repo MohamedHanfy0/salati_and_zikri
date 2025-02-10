@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami/core/services/services_shared_preferences.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/assets.dart';
-import 'package:islami/core/widgets/intro_app_bar_widget.dart';
 import 'package:islami/features/radio/presentation/cubit/radio_cubit.dart';
 import 'package:islami/features/radio/presentation/widget/item_radio_widget.dart';
 import 'package:islami/features/radio/presentation/widget/top_radio_button_widget.dart';
@@ -17,19 +16,13 @@ class RadioView extends StatefulWidget {
 }
 
 class _RadioViewState extends State<RadioView> {
- 
-  
-  
   AudioPlayer audioPlayer = AudioPlayer();
   bool isPlaying = false;
   String audioUrl = 'https://backup.qurango.net/radio/ahmad_alajmy';
-   String activeCheck = 'radio';
+  String activeCheck = 'radio';
   int indexOld = 0;
   List radio = [];
   final pref = ServicesSharedPreferences();
-  
-
-  
 
   void playAudio() {
     if (isPlaying) {
@@ -64,7 +57,6 @@ class _RadioViewState extends State<RadioView> {
     });
   }
 
-  
   void toggleMute(bool isMuted) {
     if (isMuted) {
       audioPlayer.setVolume(1.0);
@@ -75,7 +67,6 @@ class _RadioViewState extends State<RadioView> {
 
   updateRadioData(List radio) {
     pref.saveJsonData('radio', radio);
-    
   }
 
   @override
@@ -85,8 +76,6 @@ class _RadioViewState extends State<RadioView> {
   }
 
   PageController pageController = PageController();
-
-  
 
   void handlePlay(int index) {
     setState(() {
@@ -143,14 +132,13 @@ class _RadioViewState extends State<RadioView> {
         height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(Assets.assetsImagesBgRadio), fit: BoxFit.cover),
+              image: AssetImage(Assets.assetsImagesElbsmalh), fit: BoxFit.cover),
         ),
         child: Column(
           children: [
             SizedBox(
               height: 40,
             ),
-            IntorAppBarWidget(),
             TopRadioButtonWidget(
               activeCheck: activeCheck,
               click1: () {
@@ -175,7 +163,7 @@ class _RadioViewState extends State<RadioView> {
                 builder: (context, state) {
                   if (state is RadioLoading) {
                     return CircularProgressIndicator(
-                      color: AppColors.gredient2,
+                      color: AppColors.kCardContentColor,
                     );
                   } else if (state is RadioFailure) {
                   } else if (state is RadioLoaded) {
@@ -195,7 +183,6 @@ class _RadioViewState extends State<RadioView> {
                       },
                       children: [
                         ListView.builder(
-                         
                           itemCount: radio.length,
                           itemBuilder: (context, index) => ItemRadioWidget(
                             name: radio[index]['name'],
@@ -237,4 +224,3 @@ class _RadioViewState extends State<RadioView> {
     );
   }
 }
-

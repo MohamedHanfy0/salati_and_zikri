@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_style.dart';
 
@@ -8,7 +6,8 @@ class TextButtonWidget extends StatelessWidget {
   final String text;
   const TextButtonWidget({
     super.key,
-    required this.click, required this.text,
+    required this.click,
+    required this.text,
   });
 
   @override
@@ -16,8 +15,8 @@ class TextButtonWidget extends StatelessWidget {
     return GestureDetector(
       onTap: click,
       child: Text(
-       text,
-        style: AppStyle.janna18bold.copyWith(fontSize: 16),
+        text,
+        style: AppStyle.almarai16bold.copyWith(fontSize: 16),
       ),
     );
   }

@@ -1,6 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import 'package:islami/core/utils/app_colors.dart';
 
@@ -13,7 +12,8 @@ class SearchBarWidget extends StatelessWidget {
     super.key,
     required this.hintText,
     required this.icon,
-    required this.seach, required this.controller,
+    required this.seach,
+    required this.controller,
   });
 
   @override
@@ -24,14 +24,14 @@ class SearchBarWidget extends StatelessWidget {
       width: double.infinity,
       margin: EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-        color: AppColors.kBlackColor.withAlpha(400),
+        color: AppColors.kBackgroundColor.withAlpha(400),
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: AppColors.kGoldColor, width: 1),
+        border: Border.all(color: AppColors.kPrimaryColor, width: 1),
       ),
       child: TextField(
         controller: controller,
         autofocus: false,
-        cursorColor: AppColors.gredient2,
+        cursorColor: AppColors.kCardContentColor,
         textAlignVertical: TextAlignVertical.center,
         textDirection: TextDirection.rtl,
         style: TextStyle(
@@ -46,9 +46,9 @@ class SearchBarWidget extends StatelessWidget {
           suffixIcon: Padding(
             padding: EdgeInsets.all(12),
             // ignore: deprecated_member_use
-            child: SvgPicture.asset(icon,
+            child: Image.asset(icon,
                 // ignore: deprecated_member_use
-                color: AppColors.gredient2),
+                color: AppColors.kCardContentColor),
           ),
           border: InputBorder.none,
         ),

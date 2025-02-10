@@ -22,8 +22,8 @@ class ItemBooksWidget extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(width: 1, color: AppColors.gredient2)),
-        child: Text(text, style: AppStyle.janna24bold.copyWith(fontSize: 20)),
+            border: Border.all(width: 1, color: AppColors.kCardContentColor)),
+        child: Text(text, style: AppStyle.almarai24bold.copyWith(fontSize: 20)),
       ),
     );
   }

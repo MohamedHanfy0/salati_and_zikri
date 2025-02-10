@@ -24,8 +24,8 @@ class AppBarHadethWidget extends StatelessWidget {
           width: double.infinity,
           alignment: Alignment.bottomCenter,
           child: Image.asset(
-            color: color ?? AppColors.kBlackColor,
-            Assets.assetsImagesMosquBottom,
+            color: color ?? AppColors.kBackgroundColor,
+            Assets.assetsImagesElbsmalh,
             fit: BoxFit.cover,
           ),
         ),
@@ -34,8 +34,8 @@ class AppBarHadethWidget extends StatelessWidget {
           left: 10,
           top: 10,
           child: Image.asset(
-            Assets.assetsImagesCornerr1,
-            color: color ?? AppColors.kBlackColor,
+            Assets.assetsImagesElbsmalh,
+            color: color ?? AppColors.kBackgroundColor,
             width: 92,
             height: 93,
           ),
@@ -47,16 +47,16 @@ class AppBarHadethWidget extends StatelessWidget {
           child: Text(
             textAlign: TextAlign.center,
             '$numberHadeth رقم الحديث',
-            style: AppStyle.janna24bold
-                .copyWith(color: color ?? AppColors.kBlackColor),
+            style: AppStyle.almarai24bold
+                .copyWith(color: color ?? AppColors.kBackgroundColor),
           ),
         ),
         Positioned(
           right: 10,
           top: 10,
           child: Image.asset(
-            color: color ?? AppColors.kBlackColor,
-            Assets.assetsImagesCornerr2,
+            color: color ?? AppColors.kBackgroundColor,
+            Assets.assetsImagesElbsmalh,
             width: 93,
             height: 92,
           ),
@@ -71,8 +71,8 @@ class AppBarHadethWidget extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             maxLines: 15,
             textHadeth,
-            style: AppStyle.janna18bold
-                .copyWith(color: color ?? AppColors.kBlackColor, fontSize: 16),
+            style: AppStyle.almarai16bold.copyWith(
+                color: color ?? AppColors.kBackgroundColor, fontSize: 16),
           ),
         )
       ],

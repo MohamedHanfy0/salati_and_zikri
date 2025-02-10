@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_style.dart';
 import 'package:islami/core/utils/assets.dart';
-import 'package:islami/features/hadeth/presentation/views/hadeth_preview_view.dart';
 import 'package:islami/features/hadeth/presentation/widgets/app_bar_hadeth_widget.dart';
 
 class ItemHadethWidget extends StatelessWidget {
@@ -25,10 +24,7 @@ class ItemHadethWidget extends StatelessWidget {
             );
           },
         );
-        HadethPreviewView(
-          number: numberHadeth,
-          text: textHadeth,
-        );
+        
       },
       child: Expanded(
         child: Container(
@@ -37,9 +33,9 @@ class ItemHadethWidget extends StatelessWidget {
           decoration: BoxDecoration(
               image: DecorationImage(
                   opacity: 0.8,
-                  image: AssetImage(Assets.assetsImagesHadithCardBackGround)),
+                  image: AssetImage(Assets.assetsImagesElbsmalh)),
               borderRadius: BorderRadius.circular(20),
-              color: AppColors.kGoldColor),
+              color: AppColors.kPrimaryColor),
           child: AppBarHadethWidget(
               numberHadeth: numberHadeth, textHadeth: textHadeth),
         ),
@@ -65,7 +61,7 @@ class BodyDialogHadeth extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50),
-            color: AppColors.kBlackColor,
+            color: AppColors.kBackgroundColor,
           ),
           padding: EdgeInsets.all(18),
           child: Column(
@@ -74,17 +70,17 @@ class BodyDialogHadeth extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset(
-                    Assets.assetsImagesCornerr1,
-                    color: AppColors.kGoldColor,
+                    Assets.assetsImagesElbsmalh,
+                    color: AppColors.kPrimaryColor,
                   ),
                   Text(
                     "الحديث  $number",
-                    style: AppStyle.janna24bold
-                        .copyWith(color: AppColors.kGoldColor),
+                    style: AppStyle.almarai24bold
+                        .copyWith(color: AppColors.kPrimaryColor),
                   ),
                   Image.asset(
-                    Assets.assetsImagesCornerr2,
-                    color: AppColors.kGoldColor,
+                    Assets.assetsImagesElbsmalh,
+                    color: AppColors.kPrimaryColor,
                   )
                 ],
               ),
@@ -92,8 +88,8 @@ class BodyDialogHadeth extends StatelessWidget {
                 textAlign: TextAlign.center,
                 textDirection: TextDirection.rtl,
                 text,
-                style:
-                    AppStyle.janna24bold.copyWith(color: AppColors.kGoldColor),
+                style: AppStyle.almarai24bold
+                    .copyWith(color: AppColors.kPrimaryColor),
               ),
             ],
           ),
@@ -101,10 +97,10 @@ class BodyDialogHadeth extends StatelessWidget {
         Container(
           alignment: Alignment.bottomCenter,
           child: Image.asset(
-            Assets.assetsImagesMosquBottom,
+            Assets.assetsImagesElbsmalh,
             width: double.infinity,
             fit: BoxFit.cover,
-            color: AppColors.kGoldColor.withAlpha(420),
+            color: AppColors.kPrimaryColor.withAlpha(420),
           ),
         ),
       ],

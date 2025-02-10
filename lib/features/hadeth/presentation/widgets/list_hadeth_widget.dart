@@ -12,7 +12,7 @@ class ListHadethWIdget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 20),
-      height: MediaQuery.of(context).size.height - 400,
+      // height: MediaQuery.of(context).size.height - 400,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         // semanticChildCount: 2,

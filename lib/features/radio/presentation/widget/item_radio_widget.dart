@@ -31,25 +31,24 @@ class ItemRadioWidget extends StatelessWidget {
       margin: EdgeInsets.only(left: 20, right: 20, bottom: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: AppColors.kGoldColor,
-       
+        color: AppColors.kPrimaryColor,
       ),
       child: Stack(children: [
-        Positioned(
-          top: 50,
-          child: SizedBox(
-            // alignment: Alignment.bottomCenter,
-            // color: Colors.amber,
-            height: isPly ? 120 : 97,
-            width: 390,
-            child: Image.asset(
-              isPly ? Assets.assetsImagesMusic : Assets.assetsImagesMosquBottom,
-              width: double.infinity,
-              fit: BoxFit.fitHeight,
-              alignment: Alignment.bottomCenter,
-            ),
-          ),
-        ),
+        // Positioned(
+        //   top: 50,
+        //   child: SizedBox(
+        //     // alignment: Alignment.bottomCenter,
+        //     // color: Colors.amber,
+        //     height: isPly ? 120 : 97,
+        //     width: 390,
+        //     child: Image.asset(
+
+        //       width: double.infinity,
+        //       fit: BoxFit.fitHeight,
+        //       alignment: Alignment.bottomCenter,
+        //     ),
+        //   ),
+        // ),
         Column(
           children: [
             SizedBox(
@@ -61,8 +60,8 @@ class ItemRadioWidget extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               textDirection: TextDirection.rtl,
               textAlign: TextAlign.center,
-              style: AppStyle.janna24bold
-                  .copyWith(color: AppColors.kBlackColor, fontSize: 20),
+              style: AppStyle.almarai24bold
+                  .copyWith(color: AppColors.kBackgroundColor, fontSize: 20),
             ),
             SizedBox(
               height: 32,
@@ -75,8 +74,8 @@ class ItemRadioWidget extends StatelessWidget {
                   onTap: like,
                   child: Image.asset(
                     disLike
-                        ? Assets.assetsImagesVector
-                        : Assets.assetsImagesDislike,
+                        ? Assets.assetsImagesElbsmalh
+                        : Assets.assetsImagesElbsmalh,
                     width: 32,
                     height: 29,
                   ),
@@ -85,8 +84,8 @@ class ItemRadioWidget extends StatelessWidget {
                   onTap: play,
                   child: Image.asset(
                     isPly
-                        ? Assets.assetsImagesPause
-                        : Assets.assetsImagesPolygon,
+                        ? Assets.assetsImagesElbsmalh
+                        : Assets.assetsImagesElbsmalh,
                     width: 31,
                     height: 31,
                   ),
@@ -96,8 +95,8 @@ class ItemRadioWidget extends StatelessWidget {
                   child: Image.asset(
                     // Assets.assetsImagesVolumeHigh,
                     mute
-                        ? Assets.assetsImagesMute
-                        : Assets.assetsImagesVolumeHigh,
+                        ? Assets.assetsImagesElbsmalh
+                        : Assets.assetsImagesElbsmalh,
                     width: 30,
                     height: 30,
                   ),

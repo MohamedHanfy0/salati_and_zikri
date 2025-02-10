@@ -3,10 +3,8 @@ import 'package:islami/core/services/services_shared_preferences.dart';
 
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_style.dart';
-import 'package:islami/core/utils/assets.dart';
+import 'package:islami/core/widgets/app_bar_back_and_title.dart';
 import 'package:islami/core/widgets/custom_button.dart';
-import 'package:islami/core/widgets/intro_app_bar_widget.dart';
-import 'package:islami/features/subha/presentation/widgets/show_dialog_azkar.dart';
 
 class SubhaView extends StatefulWidget {
   const SubhaView({super.key});
@@ -58,6 +56,8 @@ class _SubhaViewState extends State<SubhaView> {
     }
   }
 
+  bool showZkr = false;
+
   @override
   void initState() {
     updateData(0);
@@ -69,104 +69,156 @@ class _SubhaViewState extends State<SubhaView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage(Assets.assetsImagesSebhaBackground),
-              fit: BoxFit.cover),
-        ),
+        decoration: BoxDecoration(),
         child: Column(
           children: [
             const SizedBox(
-              height: 57,
+              height: 41,
             ),
-            const IntorAppBarWidget(),
-            const SizedBox(
-              height: 16,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              decoration: BoxDecoration(
-                color: AppColors.kBlackColor.withAlpha(100),
-                borderRadius: BorderRadius.circular(15),
-              ),
-              child: Text(
-                textAlign: TextAlign.center,
-
-                // "سَبِّحِ اسْمَ رَبِّكَ الأعلى ",
-                akr,
-                style: AppStyle.janna36bold.copyWith(
-                  fontSize: 30,
-                  shadows: [
-                    Shadow(
-                      blurRadius: 10,
-                      color: AppColors.gredient2,
-                    )
-                  ],
-                ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: AppBarBackAndTitle(
+                title: 'التسبيح الإلكتروني',
               ),
             ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    ButtonLabelIcon(
-                      text: "",
-                      icon: Icon(Icons.restart_alt_outlined),
-                      click: () {
-                        setState(() {
-                          numberSubha = 0;
-                        });
-                        resetSubha();
-                      },
-                    ),
-                    ButtonLabelIcon(
-                      text: "اختيار الذكر",
-                      icon: Icon(Icons.circle),
-                      click: () {
-                        showDialogAzkar(context, updateAzkari, (index) {
-                          setState(() {
-                            akr = '${updateAzkari[index]['name']}';
-                            numberSubha = updateAzkari[index]['number'];
-                            indexUp = index;
-                            saveData();
-                          });
-                        });
-                        // showAboutDialog(context: context  );
-                      },
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    numberSubha++;
-                  });
-                  saveData();
-                },
-                child: Container(
-                  alignment: Alignment.center,
-                  width: 222,
-                  height: 222,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(Assets.assetsImagesSebha))),
-                  child: Text(
-                    numberSubha.toString(),
-                    style: AppStyle.janna36bold,
+            Visibility(visible: showZkr, child: customList()),
+            Visibility(
+              visible: showZkr == false ? true : false,
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 100,
                   ),
-                ),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    decoration: BoxDecoration(
+                      color: AppColors.kBackgroundColor.withAlpha(100),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Text(
+                        textAlign: TextAlign.center,
+
+                        // "سَبِّحِ اسْمَ رَبِّكَ الأعلى ",
+                        akr,
+                        style: AppStyle.janna36bold
+                            .copyWith(color: AppColors.kPrimaryColor)),
+                  ),
+                  Container(
+                    width: 257,
+                    height: 83.15,
+                    alignment: Alignment.center,
+                    margin: EdgeInsets.only(
+                      top: 100,
+                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.12),
+                        color: AppColors.kSecondaryColor),
+                    child: Text(
+                      numberSubha.toString(),
+                      style: AppStyle.digital50regular,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 60, vertical: 50),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ButtonLabelIcon(
+                          text: "",
+                          icon: Icon(Icons.restart_alt_outlined),
+                          click: () {
+                            setState(() {
+                              numberSubha = 0;
+                            });
+                            resetSubha();
+                          },
+                        ),
+                        ButtonLabelIcon(
+                          text: "اختيار الذكر",
+                          icon: Icon(Icons.circle),
+                          click: () {
+                            setState(() {
+                              showZkr = true;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        numberSubha++;
+                      });
+                      saveData();
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: 128,
+                      height: 128,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(100),
+                          color: AppColors.kPrimaryColor,
+                          boxShadow: [
+                            BoxShadow(
+                              blurStyle: BlurStyle.solid,
+                              spreadRadius: 5,
+                              blurRadius: 5,
+                              color: AppColors.kDarkColor,
+                              offset: Offset(-4, 4),
+                            )
+                          ]),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 80,
+                  )
+                ],
               ),
-            ),
-            SizedBox(
-              height: 80,
             )
           ],
         ),
+      ),
+    );
+  }
+
+  Widget customList() {
+    return Container(
+      height: MediaQuery.of(context).size.height - 80,
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      // color: AppColors.kSecondaryColor,
+      child: ListView.builder(
+        itemCount: updateAzkari.length,
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: () {
+              setState(() {
+                akr = '${updateAzkari[index]['name']}';
+                numberSubha = updateAzkari[index]['number'];
+                indexUp = index;
+                showZkr = false;
+                saveData();
+              });
+            },
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 20),
+              margin: EdgeInsets.only(top: 10),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: AppColors.kPrimaryColor),
+              child: Text(
+                textAlign: TextAlign.center,
+                '${updateAzkari[index]['name']} ${updateAzkari[index]['number']} ',
+                // maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: AppStyle.poppins12bold
+                    .copyWith(color: AppColors.kBackgroundColor, fontSize: 18),
+              ),
+            ),
+          );
+        },
       ),
     );
   }

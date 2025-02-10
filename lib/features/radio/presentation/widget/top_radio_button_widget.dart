@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/features/radio/presentation/widget/button_radio_widget.dart';
@@ -23,7 +22,7 @@ class TopRadioButtonWidget extends StatelessWidget {
       height: 40,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: AppColors.kBlackColor.withAlpha(450),
+        color: AppColors.kBackgroundColor.withAlpha(450),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,13 +1,14 @@
+
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:islami/core/utils/app_colors.dart';
+import 'package:islami/core/utils/app_style.dart';
 import 'package:islami/core/utils/assets.dart';
-import 'package:islami/core/widgets/intro_app_bar_widget.dart';
-import 'package:islami/features/home/presentation/cubit/home_cubit.dart';
-import 'package:islami/features/home/presentation/widgets/most_recently_list_widget.dart';
-import 'package:islami/features/home/presentation/widgets/most_recently_widget.dart';
-import 'package:islami/core/widgets/search_bar_widget.dart';
-import 'package:islami/features/home/presentation/widgets/sura_list_widget.dart';
+import 'package:islami/features/home/presentation/widgets/app_bar_home_widget.dart';
+import 'package:islami/features/home/presentation/widgets/banner_home_widget.dart';
+import 'package:islami/features/home/presentation/widgets/button_page_view_home_widget.dart';
+import 'package:islami/features/home/presentation/widgets/fram_ayat_widget.dart';
+import 'package:islami/features/home/presentation/widgets/page_view_home_widget.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -17,60 +18,140 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  TextEditingController textEditingController = TextEditingController();
-
+  PageController pageController = PageController();
   @override
   Widget build(BuildContext context) {
+    List allOption = [
+      {
+        'name': 'أسماء الله الحسني',
+        'icon': Assets.assetsImagesAsmaaAllah,
+        'path': '/asmaa'
+      },
+      {
+        'name': 'التسبيح الالكتروني',
+        'icon': Assets.assetsImagesSebha,
+        'path': '/subha'
+      },
+      {
+        'name': 'الأدعية',
+        'icon': Assets.assetsImagesDoaa,
+        'path': '/asmaa',
+      },
+      {
+        'name': 'الأحاديث',
+        'icon': Assets.assetsImagesHadeth,
+        'path': '/hadeth'
+      },
+      {
+        'name': 'الأذكار',
+        'icon': Assets.assetsImagesAzkar,
+        'path': '/azkar',
+      },
+      {
+        'name': 'القرأن',
+        'icon': Assets.assetsImagesElqran,
+        'path': '/quran',
+      },
+    ];
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          height: double.infinity,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              fit: BoxFit.fill,
-              image: AssetImage(Assets.assetsImagesBgHome),
-            ),
-          ),
-          child: Container(
-            decoration: BoxDecoration(
-              color: AppColors.kBlackColor.withAlpha(490),
-            ),
-            child: Column(
-              children: [
-                SizedBox(height: 20),
-                IntorAppBarWidget(),
-                SearchBarWidget(
-                  hintText: 'اسم السورة',
-                  icon: Assets.assetsImagesItem1,
-                  seach: (value) {},
-                  controller: textEditingController,
+      body: Padding(
+          padding: EdgeInsets.all(24),
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child: Column(
+                  spacing: 17,
+                  children: [
+                    SizedBox(
+                      height: 21,
+                    ),
+                    AppBarHomeWidget(),
+                    BannerHomeWidget(),
+                    FramAyatWidget(),
+                    PageViewHomeWidget(pageController: pageController),
+                    Container(
+                      height: 41,
+                      width: double.infinity,
+                      padding: EdgeInsets.all(4.5),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: AppColors.kPrimaryColor,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ButtonPageViewHomeWidget(),
+                          ButtonPageViewHomeWidget(),
+                          ButtonPageViewHomeWidget(),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 300,
+                      child: PageView(
+                        reverse: true,
+                        children: [
+                          GridView.builder(
+                            itemCount: allOption.length,
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                                    crossAxisSpacing: 7.5,
+                                    crossAxisCount: 3,
+                                    mainAxisSpacing: 16),
+                            itemBuilder: (context, index) {
+                              return GestureDetector(
+                                onTap: () {
+                                  GoRouter.of(context)
+                                      .push(allOption[index]['path']);
+                                },
+                                child: Container(
+                                  width: 110,
+                                  height: 124,
+                                  padding: EdgeInsets.only(bottom: 2),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    color: AppColors.kPrimaryColor,
+                                  ),
+                                  child: Container(
+                                    width: double.infinity,
+                                    height: double.infinity,
+                                    padding: EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(15),
+                                        color: AppColors.kSecondaryColor),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      spacing: 16,
+                                      children: [
+                                        Image.asset(allOption[index]['icon']),
+                                        Text(
+                                          allOption[index]['name'],
+                                          textDirection: TextDirection.rtl,
+                                          overflow: TextOverflow.ellipsis,
+                                          style:
+                                              AppStyle.almarai16bold.copyWith(
+                                            fontSize: 14,
+                                            color: AppColors.kPrimaryColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                          Container(),
+                          SizedBox(),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                // MostRecently(name: "في الآونة الأخيرة "),
-                // MostRecentlyListWidget(),
-                MostRecently(
-                  name: "قائمة السور",
-                ),
-                BlocBuilder<HomeCubit, HomeState>(
-                  builder: (context, state) {
-                    if (state is HomeLoading) {
-                      return Center(
-                        child: CircularProgressIndicator(),
-                      );
-                    }
-                    if (state is HomeFailure) {}
-                    if (state is HomeLoaded) {
-                      return SuraList(
-                        jsonData: state.quran,
-                      );
-                    }
-                    return SizedBox();
-                  },
-                )
-              ],
-            ),
-          ),
-        ),
-      ),
+              ),
+            ],
+          )),
     );
   }
 }

@@ -1,16 +1,32 @@
-
-
-
 import 'package:flutter/material.dart';
-import 'package:islami/features/hadeth/presentation/widgets/app_bar_hadeth_widget.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:islami/core/utils/app_colors.dart';
+import 'package:islami/features/hadeth/presentation/cubit/hadeth_cubit.dart';
 
 class HadethPreviewView extends StatelessWidget {
-  final String text;
+  final List hadeth;
   final int number;
-  const HadethPreviewView({super.key, required this.text, required this.number});
+  const HadethPreviewView(
+      {super.key, required this.hadeth, required this.number});
 
   @override
   Widget build(BuildContext context) {
-    return AppBarHadethWidget(numberHadeth: number, textHadeth: text,);
+    return Scaffold(
+      body: BlocBuilder<HadethCubit, HadethState>(
+        builder: (context, state) {
+          return PageView(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: AppColors.kDarkColor,
+                ),
+                child: Text(''),
+              )
+            ],
+          );
+        },
+      ),
+    );
   }
 }
