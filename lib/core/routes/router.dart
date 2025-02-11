@@ -2,10 +2,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:islami/features/asmaa_allah/presentation/cubit/asmaa_cubit.dart';
 import 'package:islami/features/asmaa_allah/presentation/views/asmaa_allah.dart';
+import 'package:islami/features/azkar/presentation/views/azkar_view.dart';
 import 'package:islami/features/hadeth/presentation/cubit/hadeth_cubit.dart';
 import 'package:islami/features/hadeth/presentation/views/hadeth_view.dart';
 import 'package:islami/features/home/presentation/views/home_view.dart';
 import 'package:islami/features/intro/presentation/views/intro_view.dart';
+import 'package:islami/features/quran/presentation/views/quran_view.dart';
 import 'package:islami/features/radio/presentation/cubit/radio_cubit.dart';
 import 'package:islami/features/radio/presentation/views/radio_view.dart';
 import 'package:islami/features/splash/presentation/views/splash_view.dart';
@@ -37,6 +39,14 @@ final GoRouter goRouter = GoRouter(routes: [
     builder: (context, state) => SubhaView(),
   ),
   GoRoute(
+    path: '/azkar',
+    builder: (context, state) => AzkarView(),
+  ),
+  GoRoute(
+    path: '/quran',
+    builder: (context, state) => QuranView(),
+  ),
+  GoRoute(
     path: '/asmaa',
     builder: (context, state) => BlocProvider(
       create: (context) => AsmaaCubit()..loadAsmaa(),
@@ -50,6 +60,4 @@ final GoRouter goRouter = GoRouter(routes: [
       child: HadethView(),
     ),
   ),
-
-  
 ]);
