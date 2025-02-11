@@ -38,6 +38,7 @@ flutter:
   assets:
     - assets/images/
     - assets/
+    - assets/hadeth/
 
   fonts:
     - family: Kamali

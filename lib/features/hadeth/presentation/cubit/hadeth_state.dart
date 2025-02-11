@@ -9,11 +9,9 @@ final class HadethFailure extends HadethState {}
 
 final class HadethLoading extends HadethState {}
 
-
-
 final class HadethLoaded extends HadethState {
+  final List hadeth;
   final List chapters;
-  final List hadith;
 
-  HadethLoaded({required this.chapters, required this.hadith});
+  HadethLoaded({required this.chapters,required this.hadeth});
 }

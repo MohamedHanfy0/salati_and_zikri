@@ -46,8 +46,10 @@ final GoRouter goRouter = GoRouter(routes: [
   GoRoute(
     path: '/hadeth',
     builder: (context, state) => BlocProvider(
-      create: (context) => HadethCubit()..loadHaiths(),
+      create: (context) => HadethCubit()..loadChapters(),
       child: HadethView(),
     ),
   ),
+
+  
 ]);

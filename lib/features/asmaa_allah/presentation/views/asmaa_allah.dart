@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_style.dart';
 import 'package:islami/core/widgets/app_bar_back_and_title.dart';
+import 'package:islami/core/widgets/fontsize_bar_widget.dart';
 import 'package:islami/features/asmaa_allah/presentation/cubit/asmaa_cubit.dart';
 
 class AsmaaAllah extends StatefulWidget {
@@ -55,40 +56,23 @@ class _AsmaaAllahState extends State<AsmaaAllah> {
                                             fontSize: 14,
                                             color: AppColors.kPrimaryColor),
                                       ),
-                                      Row(
-                                        children: [
-                                          IconButton(
-                                            onPressed: () {
-                                              setState(() {
-                                                fontSize > 9
-                                                    ? fontSize--
-                                                    : fontSize = 9;
-                                              });
-                                            },
-                                            icon: Icon(
-                                              Icons.remove,
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                          Text(
-                                            fontSize.toString(),
-                                            style: AppStyle.almarai16bold,
-                                          ),
-                                          IconButton(
-                                            onPressed: () {
-                                              setState(() {
-                                                fontSize < 50
-                                                    ? fontSize++
-                                                    : fontSize = 50;
-                                                fontSize++;
-                                              });
-                                            },
-                                            icon: Icon(
-                                              Icons.add,
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                        ],
+                                      FontSizeBarWidget(
+                                        fontSize: fontSize,
+                                        click1: () {
+                                          setState(() {
+                                            fontSize > 9
+                                                ? fontSize--
+                                                : fontSize = 9;
+                                          });
+                                        },
+                                        click2: () {
+                                          setState(() {
+                                            fontSize < 50
+                                                ? fontSize++
+                                                : fontSize = 50;
+                                            fontSize++;
+                                          });
+                                        },
                                       )
                                     ],
                                   ),
@@ -139,3 +123,4 @@ class _AsmaaAllahState extends State<AsmaaAllah> {
     );
   }
 }
+

@@ -1,14 +1,12 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_style.dart';
+import 'package:islami/core/utils/assets.dart';
 import 'package:islami/core/widgets/app_bar_back_and_title.dart';
+import 'package:islami/core/widgets/fontsize_bar_widget.dart';
 import 'package:islami/features/hadeth/presentation/cubit/hadeth_cubit.dart';
-import 'package:islami/features/hadeth/presentation/views/hadeth_preview_view.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:islami/features/hadeth/presentation/widgets/floating_button_hadeth_widget.dart';
 
 class HadethView extends StatefulWidget {
   const HadethView({super.key});
@@ -35,25 +33,14 @@ class _HadethViewState extends State<HadethView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Visibility(
-        visible: hadeth,
-        child: FloatingActionButton(
-          splashColor: AppColors.kSecondaryColor,
-          backgroundColor: AppColors.kPrimaryColor,
-          onPressed: () {
-            setState(() {
-              hadeth = false;
-            });
-            textEditingController.clear();
-          },
-          child: Transform.rotate(
-            angle: 15,
-            child: Icon(
-              Icons.arrow_back_ios,
-              color: AppColors.kBackgroundColor,
-            ),
-          ),
-        ),
+      floatingActionButton: FloatinButtonHadethWidget(
+        hadeth: hadeth,
+        click: () {
+          setState(() {
+            hadeth = false;
+          });
+          textEditingController.clear();
+        },
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 57, left: 24, right: 24),
@@ -99,48 +86,32 @@ class _HadethViewState extends State<HadethView> {
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Text(
-                                                '${_hadeht.length} أدعية',
+                                                textDirection:
+                                                    TextDirection.rtl,
+                                                '  ${_hadeht.length} حديث',
                                                 style: AppStyle.almarai16bold
                                                     .copyWith(
                                                         fontSize: 14,
                                                         color: AppColors
                                                             .kPrimaryColor),
                                               ),
-                                              Row(
-                                                children: [
-                                                  IconButton(
-                                                    onPressed: () {
-                                                      setState(() {
-                                                        fontSize > 9
-                                                            ? fontSize--
-                                                            : fontSize = 9;
-                                                      });
-                                                    },
-                                                    icon: Icon(
-                                                      Icons.remove,
-                                                      color: Colors.black,
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    fontSize.toString(),
-                                                    style:
-                                                        AppStyle.almarai16bold,
-                                                  ),
-                                                  IconButton(
-                                                    onPressed: () {
-                                                      setState(() {
-                                                        fontSize < 50
-                                                            ? fontSize++
-                                                            : fontSize = 50;
-                                                        fontSize++;
-                                                      });
-                                                    },
-                                                    icon: Icon(
-                                                      Icons.add,
-                                                      color: Colors.black,
-                                                    ),
-                                                  ),
-                                                ],
+                                              FontSizeBarWidget(
+                                                fontSize: fontSize,
+                                                click1: () {
+                                                  setState(() {
+                                                    fontSize > 9
+                                                        ? fontSize--
+                                                        : fontSize = 9;
+                                                  });
+                                                },
+                                                click2: () {
+                                                  setState(() {
+                                                    fontSize < 50
+                                                        ? fontSize++
+                                                        : fontSize = 50;
+                                                    fontSize++;
+                                                  });
+                                                },
                                               )
                                             ],
                                           ),
@@ -182,8 +153,8 @@ class _HadethViewState extends State<HadethView> {
                             visible: hadeth == false ? true : false,
                             child: SizedBox(
                               height: MediaQuery.of(context).size.height - 150,
-                              child: GridView.builder(
-                                // reverse: true,
+                              child: ListView.builder(
+                                reverse: true,
                                 itemCount: state.chapters.length,
                                 itemBuilder: (context, index) {
                                   return GestureDetector(
@@ -191,48 +162,44 @@ class _HadethViewState extends State<HadethView> {
                                       setState(() {
                                         hadeth = true;
                                         _filterData(state.chapters[index]['id'],
-                                            state.hadith);
+                                            state.hadeth);
                                       });
                                     },
                                     child: Container(
-                                      alignment: Alignment.center,
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 16, vertical: 10),
+                                      height: 72,
                                       margin: EdgeInsets.all(5),
                                       decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                          image: AssetImage(
+                                              Assets.assetsImagesBackground),
+                                        ),
                                         borderRadius: BorderRadius.circular(8),
-                                        color: AppColors.kDarkColor,
                                       ),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        spacing: 15,
-                                        children: [
-                                          Icon(
-                                            Icons.menu_book_outlined,
-                                            size: 50,
-                                            color: Color(0xffF8F8F8),
-                                          ),
-                                          Text(
-                                            textAlign: TextAlign.center,
-                                            state.chapters[index]['arabic'],
-                                            style: AppStyle.almarai16bold
-                                                .copyWith(
-                                                    fontSize: 16,
-                                                    color: AppColors
-                                                        .kSecondaryColor,
-                                                    fontWeight:
-                                                        FontWeight.w500),
-                                          ),
-                                        ],
+                                      child: Container(
+                                        alignment: Alignment.center,
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 16, vertical: 10),
+                                        height: double.infinity,
+                                        width: double.infinity,
+                                        // color: AppColors.kDarkColor,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                          color: AppColors.kPrimaryColor,
+                                        ),
+                                        child: Text(
+                                          textAlign: TextAlign.center,
+                                          state.chapters[index]['arabic'],
+                                          style: AppStyle.almarai16bold
+                                              .copyWith(
+                                                  fontSize: 18,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w500),
+                                        ),
                                       ),
                                     ),
                                   );
                                 },
-                                gridDelegate:
-                                    SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
-                                ),
                               ),
                             ),
                           ),
