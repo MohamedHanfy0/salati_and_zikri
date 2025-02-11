@@ -18,10 +18,6 @@ class Assets {
   /// assets/images/banner2.png
   static const String assetsImagesBanner2 = "assets/images/banner2.png";
 
-  /// Assets for assetsImagesDoaa
-  /// assets/images/doaa.png
-  static const String assetsImagesDoaa = "assets/images/doaa.png";
-
   /// Assets for assetsImagesElbsmalh
   /// assets/images/elbsmalh.png
   static const String assetsImagesElbsmalh = "assets/images/elbsmalh.png";
@@ -41,6 +37,10 @@ class Assets {
   /// Assets for assetsImagesMenuHamburger
   /// assets/images/MenuHamburger.png
   static const String assetsImagesMenuHamburger = "assets/images/MenuHamburger.png";
+
+  /// Assets for assetsImagesRadio
+  /// assets/images/radio.png
+  static const String assetsImagesRadio = "assets/images/radio.png";
 
   /// Assets for assetsImagesSearch
   /// assets/images/search.png

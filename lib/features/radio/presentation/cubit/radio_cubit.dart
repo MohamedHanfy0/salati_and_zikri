@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/services.dart';
@@ -16,9 +17,12 @@ class RadioCubit extends Cubit<RadioState> {
   Future<void> loadRadio() async {
     if (pref.getJsonData('radio').isEmpty) {
       try {
+        log('start');
         emit(RadioLoading());
+
         String jsonString =
             await rootBundle.loadString('assets/data_radio.json');
+        print(jsonString);
         Map jsonResponse = json.decode(jsonString);
 
         radio = jsonResponse['radios'];

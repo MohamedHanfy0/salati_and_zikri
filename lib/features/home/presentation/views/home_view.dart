@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:islami/core/utils/app_colors.dart';
@@ -33,9 +32,9 @@ class _HomeViewState extends State<HomeView> {
         'path': '/subha'
       },
       {
-        'name': 'الأدعية',
-        'icon': Assets.assetsImagesDoaa,
-        'path': '/asmaa',
+        'name': 'راديو',
+        'icon': Assets.assetsImagesRadio,
+        'path': '/radio',
       },
       {
         'name': 'الأحاديث',
@@ -124,7 +123,11 @@ class _HomeViewState extends State<HomeView> {
                                           MainAxisAlignment.center,
                                       spacing: 16,
                                       children: [
-                                        Image.asset(allOption[index]['icon']),
+                                        Image.asset(
+                                          allOption[index]['icon'],
+                                          width: 50,
+                                          height: 50,
+                                        ),
                                         Text(
                                           allOption[index]['name'],
                                           textDirection: TextDirection.rtl,

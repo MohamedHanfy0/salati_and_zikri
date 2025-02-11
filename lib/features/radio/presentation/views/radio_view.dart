@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:islami/core/services/services_shared_preferences.dart';
 import 'package:islami/core/utils/app_colors.dart';
-import 'package:islami/core/utils/assets.dart';
+import 'package:islami/core/widgets/app_bar_back_and_title.dart';
+
 import 'package:islami/features/radio/presentation/cubit/radio_cubit.dart';
 import 'package:islami/features/radio/presentation/widget/item_radio_widget.dart';
 import 'package:islami/features/radio/presentation/widget/top_radio_button_widget.dart';
@@ -128,14 +129,17 @@ class _RadioViewState extends State<RadioView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 24),
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage(Assets.assetsImagesElbsmalh), fit: BoxFit.cover),
-        ),
         child: Column(
           children: [
+            SizedBox(
+              height: 57,
+            ),
+            AppBarBackAndTitle(
+              title: 'راديو',
+            ),
             SizedBox(
               height: 40,
             ),
@@ -158,12 +162,13 @@ class _RadioViewState extends State<RadioView> {
                 });
               },
             ),
-            Expanded(
+            SizedBox(
+              height: MediaQuery.of(context).size.height - 200,
               child: BlocBuilder<RadioCubit, RadioState>(
                 builder: (context, state) {
                   if (state is RadioLoading) {
                     return CircularProgressIndicator(
-                      color: AppColors.kCardContentColor,
+                      color: AppColors.kDarkColor,
                     );
                   } else if (state is RadioFailure) {
                   } else if (state is RadioLoaded) {

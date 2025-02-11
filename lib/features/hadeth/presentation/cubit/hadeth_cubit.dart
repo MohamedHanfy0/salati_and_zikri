@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/services.dart';
@@ -8,9 +9,6 @@ part 'hadeth_state.dart';
 
 class HadethCubit extends Cubit<HadethState> {
   HadethCubit() : super(HadethInitial());
-
-
-  
 
   Future<void> loadHaiths() async {
     try {
@@ -24,6 +22,7 @@ class HadethCubit extends Cubit<HadethState> {
         hadith: hadiths,
       ));
     } catch (e) {
+      log(e.toString());
       emit(HadethFailure());
     }
   }

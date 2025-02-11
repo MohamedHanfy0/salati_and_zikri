@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/core/utils/app_colors.dart';
 import 'package:islami/core/utils/app_style.dart';
-import 'package:islami/core/utils/assets.dart';
+import 'package:squiggly_slider/slider.dart';
 
 class ItemRadioWidget extends StatelessWidget {
   const ItemRadioWidget({
@@ -26,86 +26,74 @@ class ItemRadioWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 390,
-      height: 133,
-      margin: EdgeInsets.only(left: 20, right: 20, bottom: 20),
+      // width: 390,
+      height: 77,
+      alignment: Alignment.center,
+      margin: EdgeInsets.only(left: 0, right: 0, bottom: 20),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: AppColors.kPrimaryColor,
+        color: AppColors.kSecondaryColor,
       ),
-      child: Stack(children: [
-        // Positioned(
-        //   top: 50,
-        //   child: SizedBox(
-        //     // alignment: Alignment.bottomCenter,
-        //     // color: Colors.amber,
-        //     height: isPly ? 120 : 97,
-        //     width: 390,
-        //     child: Image.asset(
-
-        //       width: double.infinity,
-        //       fit: BoxFit.fitHeight,
-        //       alignment: Alignment.bottomCenter,
-        //     ),
-        //   ),
-        // ),
-        Column(
-          children: [
-            SizedBox(
-              height: 15,
-            ),
-            Text(
-              name,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              textDirection: TextDirection.rtl,
-              textAlign: TextAlign.center,
-              style: AppStyle.almarai24bold
-                  .copyWith(color: AppColors.kBackgroundColor, fontSize: 20),
-            ),
-            SizedBox(
-              height: 32,
-            ),
-            Row(
-              spacing: 25,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                GestureDetector(
-                  onTap: like,
-                  child: Image.asset(
-                    disLike
-                        ? Assets.assetsImagesElbsmalh
-                        : Assets.assetsImagesElbsmalh,
-                    width: 32,
-                    height: 29,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 200,
+                child: Text(
+                  name,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  textDirection: TextDirection.rtl,
+                  textAlign: TextAlign.center,
+                  style: AppStyle.almarai24bold
+                      .copyWith(color: AppColors.kPrimaryColor, fontSize: 14),
+                ),
+              ),
+              Visibility(
+                visible: isPly,
+                child: SquigglySlider(
+                  //... normal Slider Widget properties ...
+                  max: 100,
+                  squiggleAmplitude: 5.0,
+                  squiggleWavelength: 5.0,
+                  squiggleSpeed: 0.3, value: 100, onChanged: (double value) {},
+                ),
+              ),
+            ],
+          ),
+          Row(
+            spacing: 20,
+            children: [
+              GestureDetector(
+                onTap: like,
+                child: Icon(
+                  disLike ? Icons.favorite : Icons.favorite_border,
+                  color: AppColors.kPrimaryColor,
+                ),
+              ),
+              GestureDetector(
+                onTap: play,
+                child: Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: AppColors.kPajeColor),
+                  child: Icon(
+                    isPly ? Icons.pause : Icons.play_arrow_rounded,
+                    color: AppColors.kSecondaryColor,
                   ),
                 ),
-                GestureDetector(
-                  onTap: play,
-                  child: Image.asset(
-                    isPly
-                        ? Assets.assetsImagesElbsmalh
-                        : Assets.assetsImagesElbsmalh,
-                    width: 31,
-                    height: 31,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: volum,
-                  child: Image.asset(
-                    // Assets.assetsImagesVolumeHigh,
-                    mute
-                        ? Assets.assetsImagesElbsmalh
-                        : Assets.assetsImagesElbsmalh,
-                    width: 30,
-                    height: 30,
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ]),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

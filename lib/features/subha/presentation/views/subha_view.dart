@@ -98,7 +98,7 @@ class _SubhaViewState extends State<SubhaView> {
                     child: Text(
                         textAlign: TextAlign.center,
 
-                        // "سَبِّحِ اسْمَ رَبِّكَ الأعلى ",
+                       
                         akr,
                         style: AppStyle.janna36bold
                             .copyWith(color: AppColors.kPrimaryColor)),

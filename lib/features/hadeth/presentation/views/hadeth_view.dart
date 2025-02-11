@@ -148,8 +148,7 @@ class _HadethViewState extends State<HadethView> {
                                         Container(
                                           padding: EdgeInsets.all(8),
                                           decoration: BoxDecoration(
-                                              color:
-                                                  AppColors.kCardContentColor,
+                                              color: AppColors.kSecondaryColor,
                                               borderRadius:
                                                   BorderRadius.circular(16)),
                                           child: SizedBox(
@@ -165,7 +164,8 @@ class _HadethViewState extends State<HadethView> {
                                                       textAlign: TextAlign.end,
                                                       '${_hadeht[index]['arabic']} ',
                                                       style: TextStyle(
-                                                          fontSize: fontSize),
+                                                          fontSize: fontSize,
+                                                          color: Colors.black),
                                                     ),
                                                   ),
                                                 ),

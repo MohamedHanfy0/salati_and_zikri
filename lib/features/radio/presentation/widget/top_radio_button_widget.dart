@@ -17,12 +17,12 @@ class TopRadioButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 20),
-      width: 390,
+      // margin: EdgeInsets.only(bottom: 10),
+      // width: 390,
       height: 40,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        color: AppColors.kBackgroundColor.withAlpha(450),
+        color: AppColors.kPajeColor.withAlpha(100),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

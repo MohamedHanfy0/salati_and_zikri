@@ -19,7 +19,7 @@ class ButtonRadioWidget extends StatelessWidget {
       onTap: click,
       child: Container(
         alignment: Alignment.center,
-        width: 185,
+        width: 175,
         height: 40,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -31,7 +31,7 @@ class ButtonRadioWidget extends StatelessWidget {
           style: AppStyle.almarai16bold.copyWith(
               color: active == 'radio'
                   ? AppColors.kBackgroundColor
-                  : Colors.white),
+                  : AppColors.kPrimaryColor),
         ),
       ),
     );
