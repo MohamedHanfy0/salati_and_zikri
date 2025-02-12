@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:islami/features/asmaa_allah/presentation/cubit/asmaa_cubit.dart';
 import 'package:islami/features/asmaa_allah/presentation/views/asmaa_allah.dart';
+import 'package:islami/features/azkar/presentation/cubit/azkari_cubit.dart';
 import 'package:islami/features/azkar/presentation/views/azkar_view.dart';
 import 'package:islami/features/hadeth/presentation/cubit/hadeth_cubit.dart';
 import 'package:islami/features/hadeth/presentation/views/hadeth_view.dart';
@@ -40,7 +41,10 @@ final GoRouter goRouter = GoRouter(routes: [
   ),
   GoRoute(
     path: '/azkar',
-    builder: (context, state) => AzkarView(),
+    builder: (context, state) => BlocProvider(
+      create: (context) => AzkariCubit()..loadAzkari(),
+      child: AzkarView(),
+    ),
   ),
   GoRoute(
     path: '/quran',

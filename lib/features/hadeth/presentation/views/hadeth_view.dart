@@ -43,7 +43,7 @@ class _HadethViewState extends State<HadethView> {
         },
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 57, left: 24, right: 24),
+        padding: const EdgeInsets.only(top: 50, left: 24, right: 24),
         child: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(
@@ -51,7 +51,7 @@ class _HadethViewState extends State<HadethView> {
             ),
             SliverToBoxAdapter(
               child: SizedBox(
-                height: 24,
+                height: 10,
               ),
             ),
             SliverToBoxAdapter(
@@ -71,7 +71,7 @@ class _HadethViewState extends State<HadethView> {
                           Visibility(
                             visible: hadeth,
                             child: SizedBox(
-                              height: MediaQuery.of(context).size.height - 150,
+                              height: MediaQuery.of(context).size.height - 100,
                               child: PageView.builder(
                                   controller: pageController,
                                   itemCount: _hadeht.length,
@@ -152,9 +152,8 @@ class _HadethViewState extends State<HadethView> {
                           Visibility(
                             visible: hadeth == false ? true : false,
                             child: SizedBox(
-                              height: MediaQuery.of(context).size.height - 150,
+                              height: MediaQuery.of(context).size.height - 100,
                               child: ListView.builder(
-                                reverse: true,
                                 itemCount: state.chapters.length,
                                 itemBuilder: (context, index) {
                                   return GestureDetector(
@@ -211,11 +210,11 @@ class _HadethViewState extends State<HadethView> {
                 ),
               ),
             ),
-            SliverToBoxAdapter(
-              child: SizedBox(
-                height: 10,
-              ),
-            ),
+            // SliverToBoxAdapter(
+            //   child: SizedBox(
+            //     height: 10,
+            //   ),
+            // ),
           ],
         ),
       ),

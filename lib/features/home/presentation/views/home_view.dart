@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:islami/core/utils/app_colors.dart';
@@ -18,9 +20,21 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   PageController pageController = PageController();
+  PageController pageControlerAll = PageController();
+  int indexPage = 0;
   @override
   Widget build(BuildContext context) {
     List allOption = [
+      {
+        'name': 'الأذكار',
+        'icon': Assets.assetsImagesAzkar,
+        'path': '/azkar',
+      },
+      {
+        'name': 'القرأن',
+        'icon': Assets.assetsImagesElqran,
+        'path': '/quran',
+      },
       {
         'name': 'أسماء الله الحسني',
         'icon': Assets.assetsImagesAsmaaAllah,
@@ -41,20 +55,10 @@ class _HomeViewState extends State<HomeView> {
         'icon': Assets.assetsImagesHadeth,
         'path': '/hadeth'
       },
-      {
-        'name': 'الأذكار',
-        'icon': Assets.assetsImagesAzkar,
-        'path': '/azkar',
-      },
-      {
-        'name': 'القرأن',
-        'icon': Assets.assetsImagesElqran,
-        'path': '/quran',
-      },
     ];
     return Scaffold(
       body: Padding(
-          padding: EdgeInsets.all(24),
+          padding: EdgeInsets.symmetric(horizontal: 24, vertical: 5),
           child: CustomScrollView(
             slivers: [
               SliverToBoxAdapter(
@@ -79,15 +83,30 @@ class _HomeViewState extends State<HomeView> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          ButtonPageViewHomeWidget(),
-                          ButtonPageViewHomeWidget(),
-                          ButtonPageViewHomeWidget(),
+                          ButtonPageViewHomeWidget(
+                            title: 'كل الوسائط',
+                            isVisibilty: indexPage == 2 ? true : false,
+                          ),
+                          ButtonPageViewHomeWidget(
+                            title: 'اوقات الصلاة',
+                            isVisibilty: indexPage == 1 ? true : false,
+                          ),
+                          ButtonPageViewHomeWidget(
+                            title: "الكل",
+                            isVisibilty: indexPage == 0 ? true : false,
+                          ),
                         ],
                       ),
                     ),
                     SizedBox(
-                      height: 300,
+                      height: 280,
                       child: PageView(
+                        controller: pageControlerAll,
+                        onPageChanged: (value) {
+                          setState(() {
+                            indexPage = value;
+                          });
+                        },
                         reverse: true,
                         children: [
                           GridView.builder(
